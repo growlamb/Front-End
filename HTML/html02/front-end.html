@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Day 001</title>
+</head>
+<body>
+	<div id="app"> 
+		<template v-if="!message">
+			<h1>You must send a message for help!</h1>
+            <p>To nearby kingdom of Hearts!</p>
+            <p>Dispatch a messenger</p>
+			
+		</template>
+		<textarea v-model="message" cols="30" rows="10"></textarea>
+		<button v-show="message">Send a message</button>
+		<pre>
+			{{ $data }}
+		</pre>
+	</div>
+</body>
+<script src="https://unpkg.com/vue"></script>
+<script>
+	new Vue({
+		el: '#app',
+		data: {
+			message: "Hi!"
+		}
+	})
+</script>
+</html>
