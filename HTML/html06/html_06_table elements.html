@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML table elements</title>
+        <style>
+        .ally-hidden {
+            overflow: hidden;
+            position: absolute;
+            clip: rect(0, 0, 0, 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            border: 0;
+            padding: 0;
+        }
+        caption.ally-hidden { position: static;}
+        table, td, th {border: 1px solid gray}
+        </style>
+    </head>
+    <body>
+        <p id="compare-shoes-table">국제(한국, 미국, 영국, 유럽) 성인 남성 운동화 사이즈 비교 표로 4행 12열로 구성되어 있습니다.</p>
+        <table aria-describedby="compare-shoes-table">
+            <caption>성인 남성 운동화 사이즈표</caption>
+            <tr>
+                <th scope="row">한국(mm)</th> 
+                <td>240</td> 
+                <td>245</td>
+                <td>250</td>
+                <td>255</td>
+                <td>260</td>
+                <td>265</td>
+                <td>270</td>
+                <td>275</td>
+                <td>280</td> 
+                <td>285</td> 
+                <td>290</td>
+            </tr>
+            <tr>
+                <th scope="row">미국(US)</th>
+                <td>6</td> 
+                <td>6.5</td>
+                <td>7</td>
+                <td>7.5</td>
+                <td>8</td>
+                <td>8.5</td>
+                <td>9</td>
+                <td>9.5~10</td>
+                <td>10~10.5</td> 
+                <td>11</td> 
+                <td>11.5</td>
+            </tr>
+            <tr>
+                <th scope="row">영국(UK)</th>
+                <td>5</td> 
+                <td>5.5</td>
+                <td>6</td>
+                <td>6.5</td>
+                <td>7</td>
+                <td>7.5</td>
+                <td>8</td>
+                <td>8.5~9</td>
+                <td>9~9.5</td> 
+                <td>10</td> 
+                <td>11</td>
+            </tr>
+            <tr>
+                <th scope="row">유럽(EU)</th>
+                <td>38~39</td> 
+                <td>39</td>
+                <td>40</td>
+                <td>40~41</td>
+                <td>41</td>
+                <td>42</td>
+                <td>42~43</td>
+                <td>43</td>
+                <td>44</td> 
+                <td>44~45</td> 
+                <td>45</td>
+            </tr>
+        </table>
+
+    </body>
+</html>
