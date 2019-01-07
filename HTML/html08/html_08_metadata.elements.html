@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="3;url=https:google.com">
+    <title>HTML metadata elements</title>
+    <meta name="descripton" content="웹페이지 내용을 요약해서 기술">
+    <meta name="keywords" content="웹페이지 주요 키워드를 콤마(,)로 구분하여 작성.">
+    <meta name="author" content="웹페이지 제작자">
+    <meta name="robots" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    <!--
+        <meta> 요소
+      - 다른 메타 요소들(<title>, <base>, <link>, <style>)로 나타낼 수 없는 메타데이터를 정의할 때 사용.
+
+        [메타데이터의 종류]
+
+          - charset이 설정된 경우:
+              charset 선언. 즉 웹페이지를 작성하는 일련의 형식에 사용되는 문자 인코딩(charset)에 대한 설정.
+              이 속성보다 요소의 lang 속성이 우선하여 적용됨.
+              
+          - http-equiv 속성이 설정된 경우:
+              pragma 지시어(Directive)로 일반적으로 웹서버가 제공하는 웹페이지가
+              어떻게 제공되어야 하는지에 대한 정보를 제공.
+
+          - name 속성이 설정된 경우:
+              문서 수준 메타 데이터의 이름을 정의하며, content 속성 값을 통해 설정.
+
+        [속성]
+          - charset
+          - http-equiv
+          - content
+              이 속성은 컨텍스트에 따라 http-equiv또는 name속성 과 연결된 값을 제공.
+          - name
+            - application name:
+                웹 페이지에서 실행중인 웹 애플리케이션 이름 정의.
+                간단한 웹 페이지는 application-name 메타를 정의해서는 안됨.
+            - description
+                페이지의 내용에 대한 짧고 정확한 요약을 설정.
+            - keywords
+                쉼표로 구분된 문자열로 페이지의 내용과 관련된 키워드를 설정.
+            - author
+                문서 작성자의 이름을 정의.
+            - robots
+                검색 로봇이 웹 페이지를 크롤링하는 동작에 대한 정의.
+                  - index
+                  - noindex
+                  - follow
+                  - nofollow
+                  - noarchive
+                  - nosnippet
+                  - noimageindex
+            - viewport
+                (비표준) 초기 viewport 크기 설정에 관한 힌트를 제공.
+                이 속성은 몇 개의 모바일 디바이스에 의해서만 사용됨.
+                  - width
+                  - height
+                  - initial-scale
+                  - maximum-scale
+                  - minimum-scale
+                  - user-scalable
+    -->
+
+    </body>
+</html>
