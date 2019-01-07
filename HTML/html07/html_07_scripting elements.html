@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko_KR">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML Scripting elements</title>
+        <link rel="stylesheet" href="css/a.css"> 
+        <style>
+            {background-color: #96e72a; margin: 0; width: 100vw;}
+        </style>
+    </head>
+    <body style="background-color: #96e72a;">
+        
+    <canvas width="600" height="600"></canvas>
+
+    <script>
+        var canvas = document.querySelector('canvas');
+        var ctx = canvas.getContext('2d');
+        ctx.translate(200, 40);
+        ctx.beginPath();
+        ctx.moveTo(180, 175);
+        ctx.fillStyle = '#ff0';
+        ctx.arc(180, 175, 60, Math.PI * -0.35, Math.PI * -1.05, true);
+        ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(190, 190);
+        ctx.fillStyle = '#ff0';
+        ctx.arc(190, 190, 100, Math.PI * -0.35, Math.PI * 0.95);
+        ctx.fill();
+    </script>
+  
+
+    <script src="js./a.js"></script>
+    <script>
+        console.log('JavaScript 코드를 실행했습니다.');
+        console.log(document.characterSet);
+        console.log(document.doctype);
+    </script>
+    <noscript>
+        <p>JavaScript를 지원하지 않습니다.</p>
+    </noscript>
+
+    </body>
+   
+</html>
