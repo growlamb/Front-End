@@ -1,0 +1,23 @@
+body {
+  margin: 50px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+abbr {
+  cursor: help;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  color: #474cc5;
+}
+
+a {
+  color: #474cc5;
+}
+
+section {
+  margin-bottom: 30px;
+}
