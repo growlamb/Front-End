@@ -1,0 +1,22 @@
+body {
+    font-family:  IropkeBatangM;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ddccdd;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+p{
+    font-size: 14px;
+    letter-spacing: -0.024em;
+    word-spacing: 0.05em;
+    text-indent: -0.2em;
+}
+.white-space-ex {
+    white-space: pre-line;
+}
