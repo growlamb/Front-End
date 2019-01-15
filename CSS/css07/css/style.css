@@ -1,0 +1,81 @@
+body {
+  margin: 50px 80px 80px;
+  min-width: 600px;
+  line-height: 1.5;
+  font-family: "Spoqa Han Sans";
+}
+
+h1 {
+  margin-left: -0.8em;
+  border: 5px solid currentColor;
+  border-left-width: 20px;
+  border-radius: 4px;
+  padding: 0.4em 0.6em 0.4em 0.25em;
+  color: #FF6F61;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 400;
+}
+
+h3 {
+  position: relative;
+  margin: 0.4em 0 0.3em;
+  padding-bottom: 4px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  color: #494b71;
+}
+
+h4 {
+  margin: 2em 0 0.1em;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+p {
+  line-height: 1.7;
+}
+
+abbr {
+  cursor: help;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  color: #FF6F61;
+}
+
+a {
+  color: #FF6F61;
+}
+
+section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+sup {
+  vertical-align: 10px;
+  font-size: 10px;
+}
+
+ul {
+  margin-top: 15px;
+  margin-bottom: 40px;
+  list-style: none;
+  padding-left: 0.5em;
+}
+
+li {
+  line-height: 2;
+}
+
+li::before {
+  content: '▶ ';
+  color: #de5848;
+}
