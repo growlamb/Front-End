@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>Operator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+  <section id="css-form">
+    <h1><abbr title="Cascading Style Sheets">증감 연산자</abbr></h1>
+    <h3>증감 연산자란 무엇일까?</h3>
+    <p><strong>증감 연산자</strong>는 숫자형 데이터를 1씩 증가시키는 증가 연산자(++)가 있으며, 반대로 1씩 감소시키는 감소연산자(--)가 있습니다. 증감 연산자는 앞에서 배운 연산자와 달리, 피연산자가 한 개만 필요한 단항 연산자입니다.<br>
+    증감 연산자는 변수의 어는 위치에 오는가에 따라 결과값이 달라집니다.
+    </p>
+    <h3>증감 연산자의 기본형</h3>
+    <ul>
+    <li>변수--; 또는 --변수;<br>
+          1 감소시킵니다.</li>
+    <li>변수++; 또는 ++변수;<br>
+          1 증가시킵니다.</li>
+    <li>var A=++B;<br>
+          변수 B의 데이터를 1 증가시킨후 변수 A에 저장합니다.
+    <li>var A=B++;<br>
+          변수 A에 변수 B의 데이터를 저장한 후 변수 B의 데이터를 1 증가시킵니다.  
+    </ul>
+      <p>
+      <h3>증감 연산자 예시</h3>
+      var num1=10;<br>
+      var num2=20;<br>
+      num1 += num2;<br>
+      var result;
+      num1 --;<br>
+      document.write(num1, "<br/>"); <br>
+      num1++;<br>
+      document.write(num1, "<br/>"); <br>
+      result=num2++;
+      document.write(result, "<br/>"); <br>
+      result=++num2;<br>
+      document.write(num1, "<br/>"); <br>
+      </p>
+      <ul>
+      <li>변수 num1에 10을 저장합니다.</li>
+      <li>변수 num2에 20을 저장합니다.</li>
+      <li>변수 result를 선언하였습니다.</li>
+      <li>변수 num1에 데이터가 1감소됩니다.<br>
+            변수 num1에 변환된 데이터를 출력합니다.</li>
+      <li>변수 num1에 데이터가 1증가됩니다.<br>
+            변수 num1에 변화되 데이터를 출력합니다.</li>
+      <li>대입 연산자가 먼저 실행되고, 증가 연산자가 실행됩니다.<br>
+            변수 result에 저장된 값 20이 출력됩니다.</li>
+      <li>증가 연산자가 먼저 발생되고, 대입 연산자가 실행됩니다.<br>
+            변수 result에 저장된 값 22가 출력됩니다.</li>
+      </ul>
+      </section>
+    </article>
+  </section>
+</body>
+</html>
