@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>Conditional Ternary Operator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+  <section id="css-form">
+    <h1><abbr title="Cascading Style Sheets">삼항 조건 연산자(Conditional Ternary Operator)</abbr></h1>
+    <h3>삼항 조건 연산자란 무엇일까?</h3>
+    <p><strong>삼항 조건 연산자</strong>는 조건식(true, false의 결과값을 반환)의 데이터 결과에 따라 실행 결과가 달라집니다. 삼항 조건 연산자는 연산하기 위해서 피연산자가 3개 필요한 삼항 연산자입니다.<br>
+    연산한 결과 조건식의 만족 여부에 따라 실행하는 스크립트의 코드를 다르게 실행하고자 할 때 사용합니다.<br>
+    예를 들어, 방문자로부터 입력받은 나이값이 20이세이상이면 '성인'이라 출력되고, 미만일 경우 '미성년자'라고 출력하고자 할 때  사용됩니다. </p>
+    <article class="part">
+      <section>
+      <h3>삼항 조건 연산자의 기본형</h3>
+      <ul>
+      <li>조건식 ? 실행문 1 : 실행문 2;<br>
+      조건식의 값이 true면 실행문 1을 실행하고, false면 실행문 2를 실행합니다.
+      </li>
+      </ul>
+      <p>
+      var a=10;<br>
+      var b=3;<br>
+      var result=a>b ? "javascript" : "hello";<br>
+      document.write(result);<br>
+      </p>
+      <ul>
+      <li>변수 result에 삼항 조건 연산의 결과값이 저장됩니다.</li>
+      <li>10>3=true이므로 실행문 1인 "javascript"를 출력합니다.</li>
+      <li>변수에 result에 삼항 조건 연산의 결과를 저장합니다. 조건식 a>b이면 10>3이므로 조건식 a>b는 true입니다.<br>
+      실행문 1인 javascript의 데이터를 반환합니다. 반환된 값은 변수 result에 저장되므로 최종적으로 화면에는 javascript가 출력됩니다.</li> 
+      </ul>
+      </section>
+    </article>
+  </section>
+</body>
+</html>
