@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>conditional statement</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+  <section id="css-form">
+    <h1><abbr title="Cascading Style Sheets">조건문(conditional statement) else문</abbr></h1>
+    <h3>else문</h3>
+    <p><strong>else문</strong>은 조건식을 true할 경우와 false 경우에 따라 실행되는 실행문이 달라집니다.<br>
+        조건식 만족 여부에 따라 수행하는 실행문이 달라지는 else의 기본형입니다.
+    </p>
+    <article class="part">
+    <section>
+    <h3>else문 기본형1</h3>
+    <p>if(조건식) { <br>
+        실행문1; <br>
+        } else{ <br>
+        실행문2;<br>
+        }<br>
+    </p>
+    <h3>else문 예시1</h3>
+    <p>var num=prompt("당신이 좋아하는 숫자는?", "0");<br>
+        if(nem%2==0){<br>
+            document.write("당신이 좋아하는 숫자는 짝수입니다.");<br>
+        }else {<br>
+            document.write("당신이 좋아하는 숫자는 홀수입니다.");<br>
+        }<br>
+    </p>
+    <ul>
+    <li>방문자에게 좋아하는 숫자를 입력받습니다. 기본값은 0입니다.</li>
+    <li>짝수일 경우에 실행</li>
+    <li>홀수일 경우에 실행</li>
+    <li>변수 num을 2로 나눴을 때 나머지 값이 0인 경우는 짝수이므로 "당신이 좋아하는 숫자는 짝수입니다."가 출력됩니다.<br>
+        0이 아닌 경우는 조건식이 false가 되므로 else 중괄호에 실행문인 "당신이 좋아하는 숫자는 홀수입니다."가 출력됩니다.</li>
+    </ul>
+    </section>
+    </article>
+  </section>
+</body>
+</html>
