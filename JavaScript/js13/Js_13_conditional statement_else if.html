@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>conditional statement</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+  <section id="css-form">
+    <h1><abbr title="Cascading Style Sheets">조건문(conditional statement) else if문</abbr></h1>
+    <h3>else if문</h3>
+    <p><strong>else if문</strong>은 두 가지 이상의 조건식과 정해놓은 조건을 만족하지 않았을 때 실행되는 실행문으로 이루어져 있습니다.
+    </p>
+    <article class="part">
+    <section>
+    <h3>else if문 기본형</h3>
+    <p>if(조건식1) { <br>
+        실행문1; <br>
+        } else if(조건식2){ <br>
+        실행문2;<br>
+        } else if(조건식3){ <br>
+        실행문3;<br>
+        } else if(조건식4){ <br>
+        실행문4;<br>
+        } else if(조건식5){ <br>
+        실행문5;<br>
+        } else {<br>
+        실행문6;<br>
+        }<br>
+    </p>
+    <ul>
+        <li>가장 위에 있는 조건식1~조건식5까지 조건 검사한 후, true하는 값이 나오면 그에 해당하는 실행문을 실행하고 조건문을 종료합니다.</li>
+        <li>조건식 중 true하는 값이 하나도 없을 때는 else문의 중괄호에 있는 실행문을 실행합니다.</li>
+    </ul>
+    <br>
+    <h3>else if문 예시</h3>
+    <p>이번 예시는 질의응답 창을 이용해 "현재는 몇 월입니까?"를 묻고 else if문을 사용해 현재 월에 해당하는 계절과 관련된 문구가 출력됩니다.</p>
+    <p>var mon=prompt("현재 몇 월입니까?", "0");<br>
+        if(mon>=9 && mon&lt;=11) {<br>
+            document.write("독서의 계절 가을이네요.");<br>
+        }else if(mon>=6 && mon&lt;=8){<br>
+            document.write("여행 가기 좋은 여름이네요.");<br>
+        }else if(mon>=3 && mon&lt;=5){<br>
+            document.write("햇살 가득한 봄이네요.");<br>
+        }else {
+            document.write("스키의 계절 겨울이네요.");<br>
+        }
+    </p>
+    <ul>
+    <li>방문자에게 현재 월을 입력받습니다. 기본값은 0으로 되어 있습니다.</li>
+    <li>9~11월까지는 다음 중괄호에 있는 실행문을 실행합니다.</li>
+    <li>6~8월까지는 다음 중괄호에 있는 실행문을 실행합니다.</li>
+    <li>3~5월까지는 다음 중괄호에 있는 실행문을 실행합니다.</li>
+    <li>그 밖에 월은 다음 중괄호에 있는 실행문을 실행합니다.</li>
+    </ul>
+    </section>
+    </article>
+  </section>
+</body>
+</html>
