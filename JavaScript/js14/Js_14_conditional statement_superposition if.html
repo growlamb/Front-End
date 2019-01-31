@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>conditional statement</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+  <section id="css-form">
+    <h1><abbr title="Cascading Style Sheets">중첩 if문</abbr></h1>
+    <h3>중첩 if문</h3>
+    <p><strong>중첩 if문</strong>은 조건문 안에 조건문이 오는 것을 말합니다.
+    </p>
+    <article class="part">
+    <section>
+    <h3>중첩 if문 기본형</h3>
+    <p>if(조건식1) { <br>
+        if(조건식2){ <br>
+        실행문; <br>
+        }}
+    </p>
+    <ul>
+        <li>중첩 if문은 일반적으로 바깥쪽에 있는 조건문인 조건식 1을 만족해야만 안쪽에 있는 조건문인 조건식2를 확인합니다.</li>
+        <li>만일 안쪽 if문의 조건식2를 만족하지 않은다면 바깥쪽 조건문인 조건식 1의 중괄호 내에 있는 실행문만 실행하고 종료됩니다.</li>
+    </ul>
+    <br>
+    <h3>중첩 if문 예시</h3>
+    <p>이번 예시는 중첩 if문을 사용해 아이디와 비밀번호가 일치했을 때 환영 문구가 출력됩니다.<br>
+    비밀번호가 일치하지 않을 경우네는 브라우저가 새로고침이 실행됩니다.</p>
+    <p>var id="admin";<br>
+       var pw="1111";<br>
+       var user_id=prompt("아이디는?", "");<br>
+       var user_pw=prompt("비밀번호는?", "");<br>
+       if(id==user_id){<br>
+        if(pw==user_pw){<br>
+        document.write(user_id+"님 반갑습니다.");<br>
+        }else{<br>
+        alert("비밀번호가 일치하지 않습니다.");<br>
+        location.reload();<br>
+        }else{<br>
+        alert("아이디가 일치하지 않습니다.");<br>
+        location.reload();<br>
+        }
+    </p>
+    <ul>
+    <li>방문자에게 아이디를 입력받습니다.</li>
+    <li>방문자에게 비밀번호를 입력받습니다.</li>
+    <li>아이디가 일치했을 경우</li>
+    <li>비밀번호가 일치하기 않을 경우</li>
+    <li>브라우저 새로고침이 실행됩니다.</li>
+    <li>안쪽 if문의 else문 종료</li>
+    <li>아이디가 일치하지 않을 경우</li>
+    <li>브라우저 새로고침이 실행됩니다.</li>
+    <li>바깥 if문의 else문 종료</li>
+    </ul>
+    </section>
+    </article>
+  </section>
+</body>
+</html>
