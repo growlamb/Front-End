@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>selection statements</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+  <section id="css-form">
+    <h1><abbr title="Cascading Style Sheets"> 선택문 (Selection Statements) switch문</abbr></h1>
+    <h3>selection statements</h3>
+    <p>선택문인 <strong>switch 문</strong>은 변수에 저장된 값과 switch문에 있는 경우의 값을 검사해, 변수와 경우의 값에서 일치하는 값이 있을 때 그에 해당한 실행문을 실행합니다.<br>
+        if문과 용도는 비슷하나 if문은 만족한 데이터가 여러 개일 경우 주로 사용하고, swit문은 여러 경우의 값 중 일치하는 데이터를 찾아 해당한 실행문을 실행시킬 때 사용됩니다.
+    </p>
+    <article class="part">
+    <section>
+    <h3>switch문 기본형</h3>
+    <p>var 변수=초기값;<br>
+        switch(변수){<br>
+            case 값1: 실행문1;<br>
+            break;<br>
+            case 값2: 실행문2;<br>
+            break;<br>
+            case 값3: 실행문3;<br>
+            break;<br>
+            case 값4: 실행문4;<br>
+            break;<br>
+            default: 실행문5;<br>
+        }<br>
+    </p>
+    <br>
+    <h3>switch문 예시</h3>
+    <p>이번 예시는 질의응답 창으로 포털검색사이트 이름을 입력받고 switch문을 이용해 입력한 이름에 해당한 사이트로 이동합니다.</p>
+    <p>var site=prompt("구글, 다음, 네이버, 네이트 중 즐겨 사용한 포털 검색 사이트는?", "");<br>
+        var url;<br>
+        switch(site) {<br>
+         case "구글": url="www.google.com";<br>
+         break;<br>
+         case "다음": url="www.daum.net";<br>
+         break;<br>
+         case "네이버": url="www.naver.com";<br>
+         break;<br>
+         case "네이트": url="www.nate.com";<br>
+         default: alert("보기 중에는 없는 사이트입니다.");<br>
+        }<br>
+        if(url) location.href="http://"+url;<br>
+    </p>
+    <ul>
+    <li>구글을 입력했을 경우</li>
+    <li>다음을 입력했을 경우</li>
+    <li>네이버를 입력했을 경우</li>
+    <li>네이트를 입력했을 경우</li>
+    <li>일치하는 값이 없을 경우</li>
+    <li>url에 데이터가 있을 겨우에만 실행됩니다.</li>
+    </ul>
+    </section>
+    </article>
+  </section>
+</body>
+</html>
