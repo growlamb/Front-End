@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>repetitive statement </title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+  <section id="css-form">
+    <h1><abbr title="Cascading Style Sheets">선택문(repetitive statement) do while문</abbr></h1>
+    <p>while문은 조건식의 만족 여부를 먼저 검사한후, 중괄호에 있는 실행문의 실행 여부를 정하지만, <strong>do while문</strong>은 반드시 한번은 실행문을 실행하고 조건식을 검사합니다.</p>
+    <article class="part">
+    <section>
+    <h3>do while문 기본형</h3>
+    <p>var 변수=초기값;<br>
+        do{ <br>
+        실행문;<br>
+        증감식;<br>
+        }while(조건식)<br>
+    </p>
+    <br>
+    <h3>do while문 예시</h3>
+        var a=10<br>
+        do{<br>
+        document.write("hello");<br>
+        }while(a&lt;3)<br>
+    <ul>
+        <li>변수 a에 초기값을 저장합니다.</li>
+        <li>먼저 출력문을 실행한 후 조건식을 검사합니다.</li>
+        <li>변수 a에 값이 3보다 크면 whlie문을 종료합니다.</li>
+        <li>중괄호에 있는 document.write("hello"); 실행문을 먼저 실행한 후, 조건식 a&lt;3의 만족 여부를 검사합니다.<br>
+            변수 a에는 10이 저장돼 두 수의 비교 연산 결과는 false를 반환해 더 이상 조건을 만족하지 않으므로 do while문을 종료시킵니다.</li>
+    </ul>
+    </section>
+    </article>
+  </section>
+</body>
+</html>
