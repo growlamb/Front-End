@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>for statement </title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+  <section id="css-form">
+    <h1><abbr title="Cascading Style Sheets">반복문(For Statement) 중첩 for문</abbr></h1>
+    <p><strong>중첩 for문</strong>은 for문 안에 for문을 사용하는 것을 말합니다.</p>
+    <article class="part">
+    <section>
+    <h3>중첩 for문 기본형</h3>
+    <p>for(초기값; 조건식; 증감식){<br>
+        for(초기값; 조건식; 증감식){<br>
+        실행문;<br>
+        }}<br>
+    <ul>
+    <li>자바스크립트를 이용해 3행 5열의 표을 만들 경우, 1행씩 행이 만들어질 때마다 5개의 열을 만들어야 할 경우 사용됩니다.</li>
+    </ul></p>
+    <br>
+    <h3>중첩 for문 예시</h3>
+    <p>이번 예시는 for문을 사용해 1행 1열부터 3행 2열까지 출력해 바깥쪽 for문은 행만큼 증가되고, 안쪽 for문은 열만큼 증가됩니다.<br>
+        for(var a=1; a&lt;=3; a++){<br>
+            for(var b=1; b&lt;=2; b++){<br>
+                document.write(a+ "행"+b+"열","&lt;br />");<br>
+            }}<br>
+    </p> 
+    <ul>
+        <li>3행(3번 반복)</li>
+        <li>2열(2번 반복)</li>
+        <li>3행이 생성되며 한 행씩 2열이 생성됩니다.</li>
+    </ul>
+    </section>
+    </article>
+  </section>
+</body>
+</html>
