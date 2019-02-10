@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>Built in Object</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+  <section id="css-form">
+    <h1><abbr title="Cascading Style Sheets">내장 객체(Built in Object)-날짜 객체(Date Object)</abbr></h1>
+    <h3>날짜 객체란?</h3>
+    <p>날짜나 시간 관련 정보를 제공받고 싶을 때는 날짜 객체를 생성합니다.<br>
+      날짜 정보 객체는 날짜와 관련된 작업을 할 때 유용한 객체입니다.<br>
+      날짜 정보 객체를 이용하면 달력과 특정 기념일 D-day 계산기도 만들 수 있습니다.
+    </p>
+    <article class="part">
+    <section>
+    <h3>Date 객체 기본형1</h3>
+    <p>참조 변수= new Date();</p>
+    <ul>
+    <li>현재 날짜 정보를 제공하는 Date 객체입니다.</li>
+    </ul>
+    <h3>Date 객체 기본형2</h3>
+    <p>참조 변수=new Date("연/월/일");<br>
+       참조 변수=new Date(연, 월-1, 일);</p>
+    <ul><li>현재 날짜가 아니라 특정 날짜의 정보를 제공받아야하므로 특정 날짜 정보 객체를 만들어 사용합니다.</li></ul>
+    <br>
+    <h3>날짜 객체 메서드</h3>
+    <p>날짜 정보 객체에는 날짜의 정보를 가져오는 메서드와 날짜를 수정하는 메서드로 나누어집니다.</p>
+    <table border="1">
+        <tr>
+            <th colspan="2">날짜 정보를 가져올 때(GET)</th>
+            <th colspan="2">날짜 정보를 수정할 때(SET)</th>
+        </tr>
+        <tr>
+            <td>getFullYear()</td> 
+            <td>연도 정보를 가져옴</td>
+            <td>setFullYear()</td>
+            <td>연도 정보만 수정</td>
+        </tr>
+        <tr>
+            <td>getDate()</td> 
+            <td>일 정보를 가져옴</td>
+            <td>setDate()</td>
+            <td>일 정보만 수정</td>
+        </tr>
+        <tr>
+            <td>getDay()</td> 
+            <td>요일 정보를 가져옴(일:0 ~ 토:6)</td>
+            <td colspan="2">요일은 날짜를 바꾸면 자동으로 바뀌므로 setDay는 없음</td>
+        </tr>
+        <tr>
+            <td>getHours()</td> 
+            <td>시 정보를 가져옴</td>
+            <td>setHours()</td>
+            <td>시 정보만 수정</td>
+        </tr>
+        <tr>
+            <td>getMinutes()</td> 
+            <td>분 정보를 가져옴</td>
+            <td>setMinutes()</td>
+            <td>분 정보만 수정</td>
+        </tr>
+        <tr>
+            <td>getSeconds()</td> 
+            <td>초 정보를 가져옴</td>
+            <td>setSeconds</td>
+            <td>초 정보만 수정</td>
+        </tr>
+        <tr>
+            <td>getMilliseconds()</td> 
+            <td>밀리초 정보를 가져옴(1/1000초 단위)</td>
+            <td>setMilliseconds()</td>
+            <td>밀리초 정보만 수정</td>
+        </tr>
+        <tr>
+            <td>getTime()</td> 
+            <td>1970년 1월 1일부터 경과된 시간을 밀리초로 표기함</td>
+            <td>setTime</td>
+            <td>1970년 1월 1일부터 경과된 시간을 밀리초로 수정함</td>
+        </tr>
+        <tr>
+            <td>toGMTString</td> 
+            <td>GMT 표준 표기 방식으로 문자형 데이터로 반환함</td>
+            <td>toLocaleString</td>
+            <td>운영 시스템 표기 방식으로 문자형 데이터로 반환함</td>
+        </tr>
+    </table>
+    <br>
+    <h3>내장 객체 예시</h3>
+    <p>var a=new Date();<br>
+        var nowMonth=a.getMonth();<br>
+        var nowDate=a.getDate();<br>
+        var nowDay=a.getDay();<br>
+        document.write("현재 월:"+nowMonth,"&lt;br />");<br>
+        document.write("현재 일:"+nowDate,"&lt;br />");<br>
+        document.write("현재 요일:"+nowDay,"&lt;br />");<br>
+        var i=new Date(2018,1,9);<br>
+        var theMonth=i.getMonth();<br>
+        var theDate=i.getDate();<br>
+        var theDay=i.getDay();<br>
+        document.write("2018평창올림픽 몇 월:"+nowMonth,"&lt;br />");<br>
+        document.write("2018평창올림픽 몇 일:"+nowDate,"&lt;br />");<br>
+        document.write("2018평창올림픽 무슨 요일:"+nowDay,"&lt;br />");<br>
+    </p>
+    <ul><li>오늘 날짜 객체를 생성하고 변수 a에 참조시켰습니다.</li>
+    <li>현재의 월의 정보를 반환하며, 현재 월보다 한달 적게 나옵니다.</li>
+    <li>현재 일자의 정보를 반환합니다.</li>
+    <li>현재 요일의 정보를 반환합니다.</li>
+    <li>2018(2.9)평창올림팍 날짜 객체를 생성합니다.</li>
+    <li>날짜 객체에서 월 정보만 가져옵니다.</li>
+    <li>날짜 객체에서 일 정보만 가져옵니다.</li>
+    <li>날자 객체에서 요일 정보만 가져옵니다.</li></ul>
+    </section>
+    </article>
+  </section>
+</body>
+</html>
