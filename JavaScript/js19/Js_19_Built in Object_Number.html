@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>Built in Object</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+  <section id="css-form">
+    <h1><abbr title="Cascading Style Sheets">내장 객체(Built in Object)_숫자 객체(Number Object)</abbr></h1>
+    <h3>숫자 객체란?</h3>
+    <p>자바스크립트를 이용하여 숫자를 표기할 때, 표현 가능한 수의 속성과 숫자 표기법에 대한 메서드를 제공합니다.<br>
+        숫자 객체는 new 키워드와 생성자 함수를 이용해 객체를 생성할 수 있습니다.
+    </p>
+    <article class="part">
+    <section>
+    <h3>숫자 객체 기본형</h3>
+    <p>var 참조 변수=new Number(값); 또는 var 참조 변수=값;</p>
+    <br>
+    <h3>숫자 객체의 속성</h3>
+    <table border="1">
+        <tr>
+            <th>속성</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td>MAX_VALUE</td> 
+            <td>표현 가능한 가장 큰 수</td>
+        </tr>
+        <tr>
+            <td>MIN_VALUE</td> 
+            <td>표현 가능한 가장 작은 수</td>
+        </tr>
+        <tr>
+            <td>POSITIVE_INFINITY</td> 
+            <td>무한대 수 표기</td>
+        </tr>
+        <tr>
+            <td>NEGATIVE_INFINITY</td> 
+            <td>음의 무한대 수 표기</td>
+        </tr>
+        <tr>
+            <td>NaN</td> 
+            <td>숫자가 아닌 경우 표기</td>
+        </tr>
+    </table>
+    <br>
+    <h3>숫자 객체의 메서드</h3>
+    <table border="1">
+        <tr>
+            <th>속성</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td>toExponential(n)</td> 
+            <td>지수 표기법으로 수수점 n자리만큼 문자형 데이터로 반환합니다.</td>
+        </tr>
+        <tr>
+            <td>toFixed(n)</td> 
+            <td>소수점 n자리만큼 반올림하여 문자형 데이터로 반환합니다.</td>
+        </tr>
+        <tr>
+            <td>toPrecision(n)</td> 
+            <td>유효 숫자 n의 개수만큼 반올림하여 문자형 데이터로 반환합니다.</td>
+        </tr>
+        <tr>
+            <td>toString</td> 
+            <td>숫자형 데이터를 문자형 데이터로 반환합니다.</td>
+        </tr>
+        <tr>
+            <td>valueOf()</td> 
+            <td>객체의 원래 값을 반환합니다.</td>
+        </tr>
+        <tr>
+            <td>parselnt(값)</td> 
+            <td>데이터를 정수로 변환하여 반환합니다.</td>
+        </tr>
+        <tr>
+            <td>parseFloat(값)</td> 
+            <td>데이터를 실수로 변환하여 반환합니다.</td>
+        </tr>
+    </table>
+    <ul>
+        <li>숫자를 지정 자릿수만큼 고정 소수점으로 표기하거나 지수 표기법 지수 표기법으로 표기할 때 사용합니다.</li>
+    </ul>
+    <br>
+    <h3>숫자(Number) 객체 예시</h3>
+    <p>var num1=3.456789;<br>
+        var num2=700000;<br>
+        var num3="30.5px";<br>
+        var num4=40;<br>
+        document.write("표현 가능한 가장 큰 수:"+Number.MAX_VALUE, "&lt;br />");<br>
+        document.write("표현 가능한 가장 작은 수:"+Number.MAX_VALUE, "&lt;br />");<br>
+        document.write("숫자가 아닌 경우의 표기:"+Number.MAX_VALUE, "&lt;br />");<br>
+        document.write("무한대 수 표기:"+Number.MAX_VALUE, "&lt;br />");<br>
+        document.write("음의 무한대 수 표기:"+Number.MAX_VALUE, "&lt;br />");<br>
+        document.write(num2.toExponential(1), "&lt;br />");<br>
+        document.write(num1.toFixed(2), "&lt;br />");<br>
+        document.write(num1.toPrecision(2), "&lt;br />");<br>
+        document.write(num1.toString(), "&lt;br />");<br>
+        document.write(num4.valueOF(), "&lt;br />");<br>
+        document.write(parselnt(num3)+num4, "&lt;br />");<br>
+        document.write(parseFloat(num3)+num4, "&lt;br />");<br>
+    </p>
+    <ul>
+        <li>Number.MAX_VALUE는 자바스크립트로 표현할 수 있는 최대값을 지수 표기법으로 반화합니다.</li>
+        <li>Number.MIN_VALUE는 자바스크립트로 표현할 수 있는 최소값을 지수 표기법으로 반홥합니다.</li>
+        <li>Number.NaN는 자바스크립로 숫자로 표기할 수 없을 때 반환하는 값입니다.</li>
+        <li>Number.POSITVE_INFINITY는 무한대값을 표기할 때 반환되는 값입니다.</li>
+        <li>Number.NEGATIVE_INFINITY는 음의 무한대값을 표기할 때 반환되는 값입니다.</li>
+        <li>num2.toExponential(1)은 num2에 저장된 값 700000을 지정한 고정 소수점 자리만큼 지수 표기법으로 값을 반환합니다.<br>
+            소수점 첫째 자리까지 표기되고 7.0 X 100000 이므로 지수 표기법은 7.0e+5로 표기됩니다.</li>
+        <li>num1.toFixed(2)는 num1에 저장된 값 3.456789를 지정한 고정 소수점 자리만큼만 반올림하여 표기합니다.<br>
+            소수점 둘째 자리까지 반올림되어 표시됩니다.</li>
+        <li>num1.toPrecision(2)는 num1에 저장된 값 3.456789에 유효한 숫자 2개(3.4)에 반올림하면 3.5를 문자형 데이터로 반홥합니다.</li>
+        <li>num1.toString()는 num1에 저장된 값 3.456789를 문자형 데이터로 반환합니다.</li>
+        <li>num4.valueOf()는 num4에 저장된 값을 반환합니다.</li>
+        <li>parseInt(num3)는 num3에 저장된 "30.5px"를 parseInt()를 사용하여 정수만 남겨 30을 반환하고<br>
+            num4의 40과 더합니다. 최종적으로 70이라는 결과를 반환합니다.</li>
+        <li>parseFloat(num3)는 num3에 저장된 "30.5px"를 parseFloat()를 사용하여 실수만 남겨 30.5를 반환하고<br>
+            num4의 40과 더합니다. 최종적으로 70.5를 반환합니다.</li>
+    </ul>
+    </section>
+    </article>
+  </section>
+</body>
+</html>
