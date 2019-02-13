@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>Built in Object</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+  <section id="css-form">
+    <h1><abbr title="Cascading Style Sheets">내장 객체(Built in Object)_배열 개체(Array Object)</abbr></h1>
+    <h3>배열 객체란?</h3>
+    <p>여러 개의 데이터를 하나의 저장소에 저장하려면 배열 객체를 생성합니다.<br>
+	배열은 뜻 그대로 하나의 저장소를 나눠서 데이터를 열거하라는 의미를 담고 있습니다.
+    </p>
+    <article class="part">
+    <section>
+	<h3>배열 객체 기본형1</h3>
+	<p>var 참조 변수=new Array();<br>
+	참조 변수[0]=값1; 참조 변수[1]=값2; 참조 변수[3]=값3,...참조 변수[n]=값n;
+	</p>
+	<h3>배열 객체 기본형2</h3>
+	<p>var 참조 변수=new Array(값1, 값2, 값3... 값n);
+	</p>
+	<h3>배열 객체 기본형3</h3>
+	<p>var 참조 변수=[값1, 값2, 값3... 값n];
+	</p>
+	<h3>배열 객체의 방식1</h3>
+	<p>var d=new Array();<br>
+	d[0]=30;<br>
+	d[1]="홍길동";<br>
+	d[2]=true;<br>
+	</p>
+	<h3>배열 객체의 방식2</h3>
+	<p>var d=new Array(30, "홍길동", true);
+	</p>
+	<h3>배열 객체의 방식3</h3>
+	<p>var d=[30, "홍길동", true];
+	</p>	
+	<ul>
+	<li>각각의 데이터는 배열로 나누어진 저장소에 나열되며, 각각의 저장소에는 인덱스 번호(번지수)가 부여됩니다. 인텍스 번호는 0부터 시작합니다.
+	</li>
+	</ul>			
+    <h3>배열 객체와 메서드 및 속성</h3>
+	<table border="1">
+        <tr>
+            <th>종류</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td>join(연결 문자)</td> 
+            <td>배열 객체 데이터를 연결 문자 기준으로 1개의 문자형 데이터로 반환합니다.</td>
+        </tr>
+        <tr>
+            <td>reverse()</td> 
+            <td>배열 객체에 데이터의 순서를 거꾸로 바꾼 후 반환합니다.</td>
+        </tr>
+        <tr>
+            <td>sort()</td> 
+            <td>배열 객체에 데이터를 오름차순으로 정렬합니다.</td>
+        </tr>
+        <tr>
+            <td>slice(index1, index2)</td> 
+            <td>배열 객체 데이터 중 원하는 인덱스 구간만큼 잘라서 배열 객체로 가져옵니다.</td>
+        </tr>
+        <tr>
+            <td>splice()</td> 
+            <td>배열 객체에 지정 데이터를 삭제하고 그 구간에 새 데이터를 삽입할 수 있습니다.</td>
+        </tr>
+        <tr>
+            <td>concat()</td> 
+            <td>2개의 배열 객체를 하나로 결합시킵니다.</td>
+        </tr>
+        <tr>
+            <td>pop()</td> 
+            <td>배열에 저장된 데이터 중 마지막 인덱스에 저장된 데이터를 삽입할 수 있습니다.</td>
+        </tr>
+        <tr>
+            <td>push(new data)</td> 
+            <td>배열 객체 마지막 인덱스에 새 데이터를 삽입합니다.</td>
+        </tr>
+        <tr>
+            <td>shift()</td> 
+            <td>배열 객체에 저장된 데이터 중 첫 번째 인덱스에 저장된 데이터를 삭제합니다.</td>
+        </tr>
+        <tr>
+            <td>unshift(new data)</td> 
+            <td>배열 객체의 가장 앞의 인덱스에새 데이터를 삽입합니다.</td>
+        </tr>
+        <tr>
+            <td>length</td> 
+            <td>배열에 저장된 총 데이터의 개수를 반환합니다.</td>
+        </tr>
+    </table>
+    <br>
+    <h3>배열 객체 예시</h3>
+    <p>var d=[30, "홍길동", true];<br>
+	document.write(d[0], "&lt;br />");<br>
+	document.write(d[1], "&lt;br />");<br>
+	document.write(d[2], "&lt;br />");<br>
+	for(var i=0; i&lt;d.length; i++){<br>
+	document.write(d[i], "&lt;br />");<br>
+	}<br>
+	for(var i in d){<br>
+	document.write(d[i], "&lt;br />");<br>
+	}<br>
+
+    </p>
+    <ul>
+    <li>0번에 해당하는 30이 출력됩니다.</li>
+	<li>1번에 해당하는 "홍길동"이 출력됩니다.</li>
+	<li>2번에 해당하는 true가 출력됩니다.</li>
+	<li>for문을 적용함 3은 배열 객체에 저장된 데이터 개수</li>
+	<li>인덱스 0, 1,2에 저장된 값을 출력합니다.</li>
+	<li>배열의 length(저장된 데이터의 개수) 속성을 이용해 반복문의 조건식에 적용함</li>
+	<li>인덱스 0, 1, 2에 저장된 값을 출력합니다.</li>
+	<li>for~in문을 적용함, 변수 i의 값은 0부터 배열 객체의 데이터 개수만큼 증가됨</li>
+    </ul>
+    </section>
+    </article>
+  </section>
+</body>
+</html>
