@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>BOM</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+    <h1><abbr title="Cascading Style Sheets">screen 객체</abbr></h1>
+    <h2>screen 객체란?</h2>
+    <p>sreen 객체는 사용자의 모니터 정보를 제공하는 객체입니다.<br>
+       모니터의 너비나 높이 또는 컬러 표현 bit를 반환합니다.</p>
+	<p>screen 객체 기본형 : screen.속성;</p>
+    <p>기본형 : alert("경고 메서지")</p>
+    <h3>screen 객체의 속성 종류</h3>
+    <table border="1">
+        <tr>
+            <th>종류</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td>screen.width</td> 
+            <td>화면의 너비값을 반환합니다.</td>
+        </tr>
+        <tr>
+            <td>screen.height</td> 
+            <td>화면의 높이값을 반환합니다.</td>
+        </tr>
+        <tr>
+            <td>screen.availWidth</td>
+            <td>작업 표시줄을 제외한 화면의 너비값을 반환합니다.</td>
+        </tr>
+        <tr>
+            <td>screen.availHeight</td>
+            <td>작업 표시줄을 제외한 화면의 높이값을 반환합니다.</td>
+        </tr>
+        <tr>
+            <td>screen.colorDepth</td>
+            <td>사용자 모니터가 표현 가능한 컬러 bit를 반환합니다.</td>
+        </tr>
+        </table>
+    <br>
+    <h3>sreen 객체 예시</h3>
+    <p>document.write("width: "+screen.width, "&lt;br />");<br>
+       document.write("height: "+screen.height, "&lt;br />");<br>
+       document.write("availWidth: "+screen.availWidth, "&lt;br />");<br>
+       document.write("availHeight: "+screen.availHeight, "&lt;br />");<br>
+       document.write("colorDepth: "+screen.colorDepth, "&lt;br />");</p>
+    <ul>
+        <li>모니터의 너비 컬러 bit 정보를 출력합니다.</li>
+        <li>모니터의 높이 컬러 bit 정보를 출력합니다.</li>
+        <li>모니터 작업 표시줄을 제외한 너비값 정보를 출력합니다.</li>
+        <li>모니터 작업 표시줄을 제외한 높이값 정보를 출력합니다.</li>
+        <li>모니터 표현 가능 컬러 bit를 반환합니다.</li>
+    </ul>
+</section>
+    </article>
+  </section>
+</body>
+</html>
