@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>BOM</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+    <h1><abbr title="Cascading Style Sheets">location 객체</abbr></h1>
+    <h2>location 객체란?</h2>
+    <p>location 객체는 사용자 브라우저 주소 창에 url에 대한 정보와 새로 고침 기능을 제공하는 객체입니다.</p>
+	<p>location 객체 기본형 : location.속성; 또는 location. 메서드()</p>
+    <h3>location 객체 속성 / 메서드 종류</h3>
+    <table border="1">
+        <tr>
+            <th>종류</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td>location.href</td> 
+            <td>주소 영역에 참조 주소를 설정하거나 url을 반환합니다.</td>
+        </tr>
+        <tr>
+            <td>location.hash</td> 
+            <td>url에 #에 명시된 값을 반환합니다.</td>
+        </tr>
+        <tr>
+            <td>location.hostname</td>
+            <td>url에 호스트 이름을 설정하거나 반환합니다.</td>
+        </tr>
+        <tr>
+            <td>location.host</td>
+            <td>url에 호스트 이름을 설정하거나 반환합니다.</td>
+        </tr>
+        <tr>
+            <td>location.port</td>
+            <td>url에 포트 번호를 반환합니다.</td>
+        </tr>
+        <tr>
+            <td>location.protocol</td>
+            <td>url에 프로토콜을 반환합니다.</td>
+        </tr>
+        <tr>
+            <td>location.search</td>
+            <td>url에 요청 값을 반환합니다.</td>
+        </tr>
+        <tr>
+            <td>location.reload()</td>
+            <td>새로 고침이 일어납니다.</td>
+        </tr>
+        </table>
+    <br>
+    <h3>location 객체 예시</h3>
+    <p>document.write("href :"+location.href, "&lt;br />");<br>
+       document.write("hash :"+location.hash, "&lt;br />");<br>
+       document.write("hostname :"+location.hostname, "&lt;br />");<br>
+       document.write("host :"+location.host, "&lt;br />");<br>
+       document.write("protocol :"+location.protocol, "&lt;br />");</p>
+    <ul>
+        <li>브라우저 주소창의 url을 가져옵니다.</li>
+        <li>url의 #에 명시된 값만 가져옵니다.</li>
+        <li>url에서 도메인 주소만 가져옵니다.</li>
+        <li>url에서 도메인과 포트 번호를 가져옵니다.</li>
+        <li>url에서 프로토콜을 가져옵니다.</li>
+    </ul>
+</section>
+    </article>
+  </section>
+</body>
+</html>
