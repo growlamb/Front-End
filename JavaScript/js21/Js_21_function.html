@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>function</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+    <h1><abbr title="Cascading Style Sheets">함수(function)</abbr></h1>
+    <h2>함수란?</h2>
+    <p>데이터를 저장할 때 변수를 선언하여 저장합니다. 변수에는 데이터만 저장할 수 있으며 실행문을 저장할 수는 없습니다.</p>
+    <h3>기본 함수 정의문</h3>
+    <p>함수를 사용해 실행문을 저장한 젓을 함수 정의문이라고 합니다. 함수 정의문은 "여기부턴 함수 정의문이야!"라고 선언한 것이라고 보면 됩니다.</p>
+    <h3>Function 기본형</h3>
+    <p>function 함수명(){<br>
+        일련의 실행문;<br>
+        }<br>
+    </p>
+    <h3>익명 함수를 선언하고 변수에 참조 시킬 경우</h3>
+    <p>참조변수 = function(){<br>
+        일련의 실행문;<br>
+        }<br>
+    </p>
+    <h3>정의되어 있는 함수를 호출하는 기본형</h3>
+    <p>함수명(); 또는 참조 변수();</p>
+    <br>
+    <h3>function  예시</h3>
+    <p>var i=0;<br>
+        function myFnc(){<br>
+            i++;<br>
+            document.write("hello"+i,"&lt;br />");<br>
+        }<br>
+    myFnc();<br>
+    var theFnc=function(){<br>
+        i++;<br>
+        document.write("bye"+i,"&lt;br />");<br>
+    }<br>
+    theFnc();<br>
+    <ul><li>myFnc 함수 정의문</li>
+        <li>myFnc 함수 호출</li>
+        <li>익명 함수를 변수 theFnc에 참조시킵니다.</li>
+        <li>변수 theFnc에 참조된 함수를 호출합니다.</li></ul>
+    </p>
+</section>
+    </article>
+  </section>
+</body>
+</html>
