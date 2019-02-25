@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>function</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+<h1><abbr title="Cascading Style Sheets">지역 변수와 전역변수</abbr></h1>
+<h2>전역변수란?</h2>
+<p>함수 정의문 내에서 var를 붙이지 않는 변수이며, 이 변수에 저장된 데이터는 자바스크립트가 선언된 곳이라면 사용할 수 있습니다.</p>
+<h2>지역변수란?</h2>
+<p>함수 정의문 내에서 var를 붙인 변수로, 이 변수에 오는 데이터는 함수 정의문 내에서만 사용할 수 있습니다.</p><br>
+<h3>전역변수 기본형</h3>
+<p>var 변수;<br>
+    function 함수명(){<br>
+    변수=값;<br>
+    }<br>
+</p>
+<h3>지역변수 기본형</h3>
+<p>function 함수명(){<br>
+    var 변수=값;<br>
+    }<br>
+</p>
+<ul><li>전역과 지역 변수를 나누는 이유는 변수의 중복 사용을 피하기 위함</li>
+    <li>함수 정의문 내에서 var를 붙여 지역변수를 이용하게 되며 여러 함수에 같은 변수가 있어도 중복될 일이 없습니다.</li>
+    <li>하지만 한 개의 변수를 여러 함수에 공용해 사용하고 싶으면 전역 변수를 선언해야 합니다.</li></ul>
+<h3>예시</h3>
+<p>var num=100;<br>
+    function myFnc(){<br>
+    var num=400;<br>
+    }<br>
+    myFnc();<br>
+    document.write(num);<br>
+</p>
+<ul><li>가장 상단에 있는 num은 전역변수이며, 함수 정의문 내에 변수는 var가 있으므로 지역 변수입니다.</li>
+    <li>함수에 실행문으로 var를 붙여 작성한 변수는 지역 변수이므로 함수의 밖에서 불러와 사용할 수 없습니다.</li>
+    <li>함수 밖에 선언된 num의 변수의 값인 100이 출력됩니다.</li>
+    </ul>
+
+</section>
+    </article>
+  </section>
+</body>
+</html>
