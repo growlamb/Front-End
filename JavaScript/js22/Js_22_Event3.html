@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>Event</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+<h1><abbr title="Cascading Style Sheets">이벤트(Event) 객체</abbr></h1>
+<h2>이벤트 객체란?</h2>
+<p>사이트에 방문자가 지정한 요소에서 이벤트가 발생할 경우, 이벤트 핸들러에 이벤트 객체를 생성하여 실행문으로 사용할 수 있습니다.<br>
+    사이트 방문자가 키보드 자판의 키를 눌렀을 때 키보드 이벤트가 발생합니다.<br>
+    이 때 객체가 발생합니다.</p>
+<h4>파이어폭스, 크롬, 사파리, 오페라, IE9 이상에서 이벤트 객체 생성</h4>
+<p>브라우저에서 키보드를 눌렀을 때 이벤트가 발생할 때 매개 변수에 이벤트 객체가 자동으로 생성됩니다.<br>
+    document.onkeydown=function(e){<br>
+    alert(e);}</p>
+<ul><li>브라우저에서 실행해 키보드의 아무 키나 누르면 onkeydown 이벤트가 발생</li>
+    <li>매개 변수에 키보드 이벤트 객체가 생성</li>
+    <li>이 매개 변수에 내용을 경고 창으로 띄우면 다음 결과 화면과 실행되 창이 나타납니다.</li></ul>
+<h4>IE 8이하 브라우저에서 이벤트 객체 생성</h4>
+<p>IE 8이하에서 이벤트 객체를 생성하려면 이벤트 발생시 인위적으로 이벤트 객체를 생성합니다.<br>
+    document.onkeydown=function(e){<br>
+    alert(window.event);}</p>
+<ul><li>IE 브라우저에서 이벤트 발생 시 이렇게 인위적으로 생성한 이벤트 객체는 IE 외의 브라우저에서는 정상적으로 생성되지 않습니다.</li></ul>
+<h4>모든 브라우저에서 이벤트 객체 생성</h4>
+<p>이벤트를 발생시킬 때 IE 8이하와 그 외에 브라우저에서 이벤트 객체를 정상적으로 생성하기 위해 삼항 조건 연상자를 사용합니다.<br>
+    document.onkeydown=function(e){<br>
+    var eventObj=e?e:window.event;<br>
+    alert(eventObj);}</p>
+<h3>이벤트 객체의 속성 종류</h3>
+<table border="1">
+<tr>
+    <td>구분</td>
+    <td>종류</td>
+    <td>설명</td>
+</tr>
+<tr>
+    <th rowspan="9">마우스 이벤트<br> 객체 속성</th>
+    <th>clientX</th>
+    <th>마우스 이벤트가 발생한 X 좌표값(수평 스크롤바 이동 너비 무시)</th>
+</tr>
+<tr>
+    <th>clientY</th>
+    <th>마우스 이벤트가 발생한 Y 좌표값(수직 스크롤바 이동 높이 무시)</th>
+</tr>
+<tr>
+    <th>pageX</th>
+    <th>마우스 이벤트가 발생한 X 좌표값(수평 스크롤바 이동 너비 포함)</th>
+</tr>
+<tr>
+    <th>pageY</th>
+    <th>마우스 이벤트가 발생한 Y 좌표값(수직 스크롤바 이동 높이 포함)</th>
+</tr>
+<tr>
+    <th>screenX</th>
+    <th>화면 모니터를 기분으로 이벤트가 발생한 X 죄표값</th>
+</tr>
+<tr>
+    <th>screenY</th>
+    <th>화면 모니터를 기분으로 이벤트가 발생한 Y 죄표값</th>
+</tr>
+<tr>
+    <th>layerX</th>
+    <th>position을 적용한 요소를 기준으로 이벤트가 발생한 X 좌표값</th>
+</tr>
+<tr>
+    <th>layerY</th>
+    <th>position을 적용한 요소를 기준으로 이벤트가 발생한 Y 좌표값</th>
+</tr>
+<tr>
+    <th>button</th>
+    <th>마우스에 눌린 버튼의 값</th>
+</tr>
+<tr>
+    <th rowspan="4">키보드 이벤트<br> 객체 속성</th>
+    <th>keyCode</th>
+    <th>키보드에 눌린 유니코드 값</th>
+</tr>
+<tr>
+    <th>altKey</th>
+    <th>alt 키가 눌려 있으면 true를 그렇지 않으면 false를 반환합니다.</th>
+</tr>
+<tr>
+    <th>ctrlKey</th>
+    <th>ctrl 키가 눌려 있으면 true를 그렇지 않으면 false를 반환합니다.</th>
+</tr>
+<tr>
+    <th>shiftKey</th>
+    <th>shift 키가 눌려 있으면 true를 그렇지 않으면 false를 반환합니다.</th>
+</tr>
+<tr>
+    <th>전체 이벤트<br> 객체 속성</th>
+    <th>target</th>
+    <th>this와 같이 이벤트가 발생한 요소를 반환합니다.</th>
+</tr>   
+</table>
+</section>
+    </article>
+  </section>
+</body>
+</html>
