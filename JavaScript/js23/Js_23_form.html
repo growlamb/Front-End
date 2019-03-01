@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>FORM</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+<h1><abbr title="Cascading Style Sheets">폼의 유효성 검증</abbr></h1>
+<p>자바스크립트는 HTML 폼 안의 데이터를 서버로 보내기 전에 검증 하는게 많이 사용됩니다.<br>
+    예) 회원 가입 페이지에서 ID 입력 시 정해진 문자 수를 초과할 경우, 이메일 주소를 잘못 입력할 경우 </p>
+<h4>검증할 경우</h4>
+<ul><li>사용자가 필수적인 필드를 채웠는가?</li>
+    <li>사용자가 유효한 길이의 텍스트를 입력하였는가?</li>
+    <li>사용자가 유효한 이메일 주소를 입력하였는가?</li>
+    <li>사용자가 유효한 날짜를 입력하였는가></li>
+    <li>사용자가 숫자 필드에 문자를 입력하지 않았는가?</li>
+</ul>
+<h3>폼 데이터 접근</h3>
+<p>사용자가 입력한 폼 데이터에 접근하기 위해 폼 안에 있는 필드의 id나 name 속성을 이용합니다.<br>
+    input type="text" id="addr" name="addr"</p>
+<ul><li>id 속성을 이용할 때 getElementByld()를 사용해 요소를 찾습니다.</li>
+    <li>반면 name 속성을 이용할 때 form 객체에서 name을 찾습니다.</li>
+    <li>form 객체는 배열이고 각 배열 요소는 form["name"]과 같이 name 속성으로 접근할 수 있습니다.</li></ul>
+<h5>데이터 검증 언제?</h5>
+<p>언제 데이터 검증할 지 고민 전 입력 필드와 관련해서 어떤 이벤트가 발생할지 생각합니다.</p>
+<ul><li>사용자가 입력 필드를 마우스로 선택하면 그 순간 onfocus 이베느가 발생합니다.</li>
+    <li>사용자가 데이터를 입력한 후 에 입력 필드를 떠나면 onblur 이벤트가 발생합니다.</li>
+    <li>필드를 떠날 때 입력 내용이 변경되면 onchange 이벤트가 발생합니다.</li></ul>
+<h5>사용자가 아무것도 입력하지 않은 경우</h5>
+<h5>script</h5>
+<p>function checkNotEmpty(field){<br>
+    if (field.value.length==0) {<br>
+        alert("필드가 비어있네요");<br>
+        field.focus();<br>
+        return false;<br>
+    } return true; }</p>
+<h5>form</h5>
+<p> 이름: &lt;input type='text' id='user' /><br>
+    &lt;input type='button' onclick="checkNotEmpty(document.getElementById('user'))" value='확인' /></p>
+</section>
+    </article>
+  </section>
+</body>
+</html>
