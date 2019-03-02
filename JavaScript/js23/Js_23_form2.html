@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>FORM</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+<h1><abbr title="Cascading Style Sheets">데이터 길이 검증</abbr></h1>
+<p>사용자가 정해진 개수의 문자만을 입력하도록 하는 경우<br>
+    예) 주민등록 번혼 13자리, 우편번호, 이름, 전화번호 등</p>
+<h4>script</h4>
+<p>function checkLength(elem, min, max){<br>
+    var s=elem.value;<br>
+    if(s.length >= min&&s.length&lt;=max){<br>
+        return true;<br>
+        } else {
+        alert(min+"문자와"+max+"문자 사이로 입력해주세요");<br>
+        elem.focus();<br>
+        return false;}}</p>
+<h4>form</h4>
+    <p> 이름(6~8 문자): <input type='text' id='name' /><br>
+    <input type='button' onclick="checkLength(document.getElementById('name'), 6, 8)" value='확인' /></p>
+</section>
+    </article>
+  </section>
+</body>
+</html>
