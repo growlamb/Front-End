@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>FORM</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+<h1><abbr title="Cascading Style Sheets">선택 검증</abbr></h1>
+<p>HTMl select 필드에서 사용자가 선택을 했는지 검증하려면 살짝의 트릭이 필요합니다.<br>
+   첫 번째 옵션을 도움말로 두는 것입니다.<br>
+    ex) "선택하세요"라는 문구를 제시하고 만약 사용자가 선택을 하지 않았다면 이 문구가 반환 될 것입니다. </p>
+<h5>script</h5>
+<p>function checkSelection(elem, msg) {<br>
+        if (elem.value == 0) {<br>
+            alert(msg);<br>
+            elem.focus();<br>
+            return false;<br>
+        } else {<br>
+            return true;}}<br>
+<h5>form</h5>
+<p> 과일 선택 &lt;select id="fruits" class="required"><br>
+    &lt;option value="0">선택하세요.&lt;/option><br>
+    &lt;option value="1">딸기&lt;/option><br>
+    &lt;option value="2">귤&lt;/option><br>
+    &lt;option value="3">오렌지&lt;/option><br>
+    &lt;input type='button' onclick="checkSelection(document.getElementById('fruits'), '하나를 선택해주세요')" value='확인' />
+</p>
+</section>
+</body>
+</html>
