@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>CANVAS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+<h1><abbr title="Cascading Style Sheets">캔버스(canvas) 요소</abbr></h1>
+<p>캔버스는 canvas 요소를 생성합니다.<br>
+    캔버스는 HTML 페이지상에서 사각 형태 영역을 말합니다.<br>
+    canvas 요소는 디폴트 값으로 경계를 가지지 않습니다.
+</p>
+<p>canvas id="myCanvas" width="300" height="300"</p>
+<ui><li>항상 id속성을 지정합니다.<br>id속성이 있어야 자바스크립트에서 참조를 합니다.</li>
+    <li>가로, 세로 크기 설정합니다.<br>경계를 추가할 땐 style 속성을 사용합니다.</li></ui>
+<h3>예시</h3>
+<p>&lt; canvas id="myCanvas" width="300" height="300" style="border: 1px dotted blue">&lt;/canvas><br>
+    var canvas=document.getElementById("myCanvas");<br>
+    var context=canvas.getContext("2d");<br>
+    context.fillStyle="#0000FF";<br>
+    context.fillRect(0, 0, 100, 50);</p>
+<ul><li>캔버스 요소를 정의한다.</li>
+    <li>먼저 캔버스 요소를 찾는다.</li>
+    <li>캔버스에서 컨텍스트를 얻는다.</li>
+    <li>캔버스 위에 사각형을 그린다.</li></ul>
+<h4>var canvas = document.getElementById("myCanvas");</h4>
+<p>HTML 문서 중에서 canvas 요소를 찾는다.</p>
+<h4>var context = canvas.getContext("2d")</h4>
+<p>캔버스의 getContext() 메서드는 호출해서 컨텍스트 객체를 얻는다. 이때 인수로 "2d"를 전달합니다.<br>
+    2d는 2차원 그래픽입니다.</p>
+<h4>context.fillStyle = "#0000FF";</h4>
+<p>fillStyle속성은 채우기 속성을 정의합니다. 채우기 속성은 색사이나 그라디언트 또는 패턴이 될 수 있습니다. </p>
+<h4>context.fillRect(0, 0, 100, 50);</h4>
+<p>fillRect(x, y, width, height) 메서드는 현재의 채우기 속성을 가지고 사각형을 화면에 그립니다.<br>
+    fillRect() 메서드는 (0, 0, 100, 50) 을 인수로 가지는데 이것의 의미는 좌측 상단에서 시작해 100X50 픽셀의 사각형을 그리는 의미입니다.</p>
+</section>
+</body>
+</html>
