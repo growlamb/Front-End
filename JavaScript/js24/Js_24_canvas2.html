@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>CANVAS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+<h1><abbr title="Cascading Style Sheets">캔버스(canvas) 요소</abbr></h1>
+<h3>직선 그리기</h3>
+<p>캔버스에는 직선, 곡선, 사각형, 원, 이미지, 텍스트를 그릴 수 있습니다.</p>
+<h5>직선을 그리기 위해 메서드</h5>
+<ul><li>moveTo(x, y)는 직선의 시작점을 정의합니다.</li>
+    <li>lineTo(x, y)는 직선의 끝점을 정의합니다.</li></ul>
+<h3>예시</h3>
+<p>&lt; canvas id="myCanvas" width="300" height="300">&lt;/canvas><br>
+    var canvas=document.getElementById("myCanvas");<br>
+    var context=canvas.getContext("2d");<br>
+    context.beginPath();<br>
+    context.moveTo(0, 0);<br>
+    context.lineTo(100, 100);<br>
+    context.lineTo(150, 50);<br>
+    context.lineTo(200, 100);<br>
+    context.stroke();</p>
+<ul><li>경로를 형성해서 그릴 때는 마지막에 항상 stroke()을 호출해야 그림이 실제 그려집니다.</li></ul>
+</section>
+</body>
+</html>
