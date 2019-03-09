@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>CANVAS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+<h1><abbr title="Cascading Style Sheets">캔버스(canvas) 요소</abbr></h1>
+<h3>원 그리기 메서드</h3>
+<p>arc(x, y, radius, starAngle, endAngle, antiClockwise) -(x, y)를 중심으로 하여 반지름이 radius인 원을 그립니다.<br>
+    star는 시작 각도, end 종료 각도입니다.</p>
+<ul><li>arc() 메서드에서 각도는 상수 PI를 이용합니다.</li>
+    <li>원은 starAngle에서 endAngle까지만 그려집니다.</li>
+    <li>antiClockwise는 반시계 방향인지 아니면 시계방향인지를 true, false를 이용해 나타냅니다.</li>
+    <li>원호를 그린 후에 시작점과 종료점을 연결해 그리고 싶으면 closePath()를 호출합니다.<br>
+        closePath()는 경로를 닫게 됩니다.</li></ul>
+<h3>예시</h3>
+<p>
+    var canvas=document.getElementById("myCanvas");<br>
+    var context=canvas.getContext("2d");<br>
+    context.beginPath();<br>
+    context.arc(100, 100, 80, 0, 2.0*Math.PI, false);<br>
+    context.strokeStyle= "red";<br>
+    context.stroke();<br>
+    context.beginPath();<br>
+    context.arc(100, 100, 60, 0, 1.5*Math.PI, false);<br>
+    context.closePath();<br>
+    context.strokeStyle= "blue";<br>
+    context.stroke();<br>
+    context.beginPath();<br>
+    context.arc(100, 100, 40, 0, 1.5*Math.PI, false);<br>
+    context.strokeStyle= "green";<br>
+    context.stroke();<br></p>
+</section>
+</body>
+</html>
