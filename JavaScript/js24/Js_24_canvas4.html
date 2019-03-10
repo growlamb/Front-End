@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>CANVAS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+<h1><abbr title="Cascading Style Sheets">캔버스(canvas) 요소</abbr></h1>
+<h3>곡성 그리기</h3>
+<p>베지어 곡선 같은 3차 고선도 그릴 수 있습니다. 곡선은 4개의 제어 점 안에서 그려지는 3차 곡선입니다.</p>
+<ul><li>Srart Point</li>
+    <li>Control Point 1</li>
+    <li>Control Point 2</li>
+    <li>End Point</li>
+<h3>예시</h3>
+<p>
+    var canvas=document.getElementById("myCanvas");<br>
+    var context=canvas.getContext("2d");<br>
+    context.beginPath();<br>
+    context.moveTo(90, 130);<br>
+    context.bezierCurveTo(140, 10, 288, 10, 288, 130);<br>
+    context.lineWidth=10;<br>
+    context.strokeStyle='red';<br>
+    context.stroke();</p>
+</section>
+</body>
+</html>
