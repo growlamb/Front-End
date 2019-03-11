@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>CANVAS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+<h1><abbr title="Cascading Style Sheets">캔버스(canvas) 요소</abbr></h1>
+<h3>도형 그리기</h3>
+<p>일반적인 도형은 경로를 형성해 그립니다. 경로는 beginPath() 호출에서 시작해 closePath() 호출에서 종료됩니다.</p>
+<h3>예시</h3>
+<p>
+    var canvas=document.getElementById("myCanvas");<br>
+    var context=canvas.getContext("2d");<br>
+    context.beginPath();<br>
+    context.moveTo(50, 100);<br>
+    context.lineTo(75, 50);<br>
+    context.lineTo(100, 100);<br>
+    context.closePath();<br>
+    context.fillStyle="red";<br>
+    context.fill();</p>
+<ul><li>beginPath()호출한 후 moveTo(), lineTo(), quadricCurveTo(), bezierCurveTo(), arcTo(), arc()를 호출해서 경로를 실제로 생성합니다.</li>
+    <li>경로가 생성된 후에는 closePath()를 호출해서 경로를 닫고 stroke()을 호출해 경로의 외각선을 그리거나 fill()을 호출해 경로 안을 채워 그립니다.</li></ul>
+</section>
+</body>
+</html>
