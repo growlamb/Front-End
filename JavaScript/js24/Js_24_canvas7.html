@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>CANVAS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+<h1><abbr title="Cascading Style Sheets">캔버스(canvas) 요소</abbr></h1>
+<h3>선 속성 그리기</h3>
+<p>선을 그릴 때도 여러가지 속성을 지정할 수 있습니다.</p>
+<ul><li>context.lineWidth : 선의 두께를 지정합니다.</li>
+    <li>context.strokesStyle : 선의 색상을 지정합니다.</li>
+    <li>context.lineCap : 선의 양쪽 끝점의 모양을 지정합니다.<br>
+        butt, round, square 속성을 가지고 있습니다.</li></ul>
+<h3>예시</h3>
+<p>이번 예시는 30 pixel 높이의 Arial 폰트로 태워진 텍스트를 그리는 코드입니다.</p>
+<p>
+    var canvas=document.getElementById("myCanvas");<br>
+    var context=canvas.getContext("2d");<br>
+    context.beginPath();<br>
+    context.lineWidth=20;<br>
+    context.lineCap="round";<br>
+    context.moveTo(20, 20);<br>
+    context.lineTo(200, 20);<br>
+    context.stroke();</p>
+</section>
+</body>
+</html>
