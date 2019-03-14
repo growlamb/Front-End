@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>CANVAS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+<h1><abbr title="Cascading Style Sheets">캔버스(canvas) 요소</abbr></h1>
+<h3>패턴으로 채우기</h3>
+<p>패턴으로 캔버스를 채우기 위해서 createPattern()을 이용해 패턴 객체를 생성합니다.<br>
+     다음으로 컨텍스트의 fillStyle속성을 패턴 객체로 설정합니다.<br>
+    최종적으로 fill() 메서드를 호출해서 도형의 내부를 패턴으로 채우면 됩니다.</p>
+<p> createPattern() 메서드는 이미지 객체와 repeat  옵션을 요구합니다.<br>
+    옵션은 repeat(), repeat-x, repeat-y, no-repeat 입니다.<br>
+    지정되지 않으면 repeat 옵션은 디폴트로 repeat로 설정됩니다.<br>
+    x, y방향으로 모두 반복하라는 의미가 됩니다.</p>
+<h3>패턴 패우기 예시</h3>
+<p>
+    var canvas=document.getElementById("myCanvas");<br>
+    var context=canvas.getContext("2d");<br>
+    var image=new Image();<br>
+    image.src="patter.png";<br>
+    image.onload=function(){<br>
+        var pattern=context.createPattern(image, "repeat");<br>
+        context.rect(0, 0, canvas.width, canvas.height);<br>
+        context.fillStyle=pattern;<br>
+        context.fill();};</p>
+</section>
+</body>
+</html>
