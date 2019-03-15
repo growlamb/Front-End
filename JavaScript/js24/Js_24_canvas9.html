@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>CANVAS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+<h1><abbr title="Cascading Style Sheets">캔버스(canvas) 요소</abbr></h1>
+<h3>도형 단일 색상으로 채우기</h3>
+<p>도형의 단일 색상으로 채우려면 다음과 같이 컨텍스트의 fillStyle을 설정합니다.</p>
+<p>context.fillStyle='red';</p>
+<h3>도형 그라디언트로 채우기</h3>
+<p>그라디언트도 사각형이나, 원, 텍스트를 채우는 데 사용합니다.</p>
+<ul><li>createLinearGradient(x, y, x1, y1) : 선형 그라디언트를 생성합니다.</li>
+    <li>creatRadialGradient(x, y, r, x1, y1, r1) :원형 그라디언트를 생성합니다.</li></ul>
+<p>그라디언트 객체가 생성되면 2개 이상의 종료 색상을 반드시 추가해야합니다.<br>
+    addColorStop() 메서드는 종료 색상과 위치를 지정합니다.<br>
+    그라디언트 위치는 0과 1 사이의 실수로 지정됩니다.</p>
+<h4>선형 그라디언트 예시</h4>
+<p>
+    var canvas=document.getElementById("myCanvas");<br>
+    var context=canvas.getContext("2d");<br>
+    var gradient=context.creatLinearGradient(0, 0, 200, 0);<br>
+    gradient.addColorStop(0, "white");<br>
+    gradient.addColorStop(1, "red");<br>
+    context.fillStyle=gradient;<br>
+    context.fillRect(10, 10, 180, 90);</p>
+<h4>도형 그라디언트 예시</h4>
+<p>
+    var canvas=document.getElementById("myCanvas");<br>
+    var context=canvas.getContext("2d");<br>
+    var gradient=context.createRadialGradient(70, 50, 10, 80, 60, 120);</br>
+    gradient.addColotStop(0, "white");<br>
+    gradient.addColotStop(1, "red");<br>
+    context.fillStyle=gradient;<br>
+    context.fillRect(10, 10, 180, 90);</p>
+</section>
+</body>
+</html>
