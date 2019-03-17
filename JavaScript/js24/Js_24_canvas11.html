@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>CANVAS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+<h1><abbr title="Cascading Style Sheets">캔버스(canvas) 요소</abbr></h1>
+<p>HTML5에서는 이차원 변환으로 평행이동, 신축, 회전이 있습니다.<br>
+    도형 변환은 일반적으로 행렬을 이용해 자신이 원하는 변환을 생성해 적용할 수 있습니다. </p>
+<h3>평행 이동(Translation)</h3>
+<p>평행 이동은 캔버스를 수평이나 수직으로 이동할 수 있습니다. Canvas 클래스 translation() 메서드는 캔버스 좌표 공간의 원점을 평행을 이동합니다.<br>
+통상적으로 그래픽스에서 평행 이동과 같은 모든 변환은 내부적으로 행렬을 사용합니다.<br> 
+(x, y) 좌표에 1을 추가한 동차 좌표를 만든 후에 행렬식을 이용해 변환된 좌표를 계산합니다.</p>
+<h4>예시</h4>
+<p>
+    var canvas=document.getElementById("myCanvas");<br>
+    var context=canvas.getContext("2d");<br>
+    context.fillStyle="blue";<br>
+    context.fillRect(0, 0, 100, 100);<br>
+    context.translate(50, 50);<br>
+    context.fillStyle="red";<br>
+    context.fillRect(0, 0, 100, 100);</p>
+<h3>회전(Rotation)</h3>
+<p>좌표 공간을 회전시키려면 rotate()를 사용합니다. rotate(float degree)는 (0,0)을 기준으로 좌표 공감을 회전시킵니다.<br>
+만약 다른 위치를 기준으로 회전시키려면 rotate(float degree, float px, float py)를 사용합니다. 그러므로 (px, py가 회전의 중심점이 됩니다.</p>
+<p>context.translate(50, 50);<br>
+ context.rotate(Math.PI/4);</p>
+<h3>신축(Scaling)</h3>
+<p>캔버스의 신축 비율을 설정하려면 scale() 메서드를 사용합니다.</p>
+<p>context.translate(50, 50);<br>
+context.scale(0.5, 0.5);</p>
+<h3>일반적인 변환</h3>
+<p>일반적인 변환은 직접 변환 행령의 값을 지정하면 됩니다. transform() 메서드를 사용하고 매개 변수 a에서 f까지를 직접 설정하면 됩니다.<br>
+context.transform(1, 0, 0, 1, 50, 50);</p>
+</section>
+</body>
+</html>
