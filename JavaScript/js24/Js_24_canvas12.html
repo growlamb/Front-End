@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>CANVAS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+<h1><abbr title="Cascading Style Sheets">캔버스(canvas) 요소</abbr></h1>
+<h3>애니메이션</h3>
+<p>애니메이션에는 CSS3을 이용한 애니메이션과 캔버스와 자바스크립트를 사용하는 애니메이션이 있습니다. 캔버스에서 사용하는 애니메이션에 대해서 알아보겠습니다.</p>
+<h3>바운스 볼 애니메이션(Bouncing Ball Animation) 예시</h3>
+<p>공이 캔버스 안 즉 상자 안에서 반사되면서 움직이는 애니메이션입니다.
+    <ol>
+        <li>캔버스 지웁니다.</li>
+        <li>(x, y) 위치에 그림을 그립니다.</li>
+        <li>위치를 업데이트 합니다.</li>
+        <li>1부터 3번을 반복합니다.</li>
+    </ol> </p>
+<h3>1 캔버스 지우기</h3>
+<p>캔버스를 지우기 위해서는 clearRect() 메서드를 사용합니다.<br>
+    context.clearRext(0, 0, 300, 200);</p>
+<h3>2 캔버스에 그림 그리기</h3>
+<p>웹 페이시지 안에 캔버스 요소를 생성하고 자바스크립트로 빨간색 원을 그립니다.<br>
+그림을 그리기 전에는 반드시 beginPath()를 호출해 줍니다.<br>
+fill()을 호출하면 모든 경로를 전부 칠하게 되는데 beginPath()를 호출하지 않으면 경로가 초기화되지 않아서 이전 경로까지 모두 칠하게 됩니다.<br>
+context.beginPath();<br>
+context.fillStyle="red";<br>
+context.arc(x, y, 20, 0, Math.PI*2, true);<br>
+context.closePath();<br>
+context.fill();</p>
+<h3>3 위치를 업데이트 하기</h3>
+<p>애니메이션은 시간에 따라 변화되는 것입니다. 일반적으로 도형의 위치나 크기가 변경됩니다.<br>
+이번 예시에는 볼의 위치를 변화시키도록 합니다.<br>
+볼의 위치는 (x, y) 변수에 저장되어 (x, y)를 적절하게 변겅합니다.<br>
+dx, dy는 볼이 한번 움직이는 거리로서 5초 초기화 됩니다.br>
+x += dx;<br>
+y += dy;<br>
+바운스되는 볼을 만들려면 볼이 벽에 부딪치면 반사되도록 해야 합니다. <br>
+x, y 위치가 벽에 닿으면 dx, dy를 반전합니다. dx, dy가 반전되면 움직이는 방향이 반대로 될 것입니다.<br>
+if (x &lt; (0+20) || x > (300-20))<br>
+dx = -dx;<br>
+if (y &lt; (0+20) || y > (200-20))<br>
+dy = -dy;<br>
+x += dx;<br>
+y += dy;</p>
+<h3>4 1~3 절차 반복하기</h3>
+<p>모든 애니메이션을 반복합니다.<br>
+setInterval(draw, 10);</p>
+</section>
+</body>
+</html>
