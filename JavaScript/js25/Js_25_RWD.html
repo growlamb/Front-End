@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>RWD</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+<h1><abbr title="Cascading Style Sheets">반응형 웹 페이지 디자인(Responsive Web Design)</abbr></h1>
+<p>PC용 웹 사이트는 스마트폰이 등장하면서 웹 디자인 영역에도 큰 영양을 주었습니다. 스마트폰 화면에 맞춘 사이트를 따로 만들어애 했습니다.<br>
+반응형 웹이 등장하면서 PC, TV, 내비게이션, 스마트 기기 등 다양한 기기에  반응하는 웹사이트입니다.<br>
+사용자가 접속하는 기기 또는 환경에 맞춰 크기가 자동으로 조덜되어 최적화된 화면 레이아웃을 보여줍니다.</p>
+<h3>반응형 웹 페이지 디자인 장점</h3>
+<p><ol>
+<li>유지관리가 편합니다.</li>
+<li>최신 웹표준으 따릅니다.</li>    
+<li>기기의 화면 크기나 해상도에 구애받지 않습니다.</li>
+<li>가로, 세로 화면의 변화에 즉각 반응합니다.</li>
+<li>어느 기기에서든 사이트 주소가 같습니다.</li></ol><br>
+단점으로는 예전 브라우저 버전과 호환성에 문제가 있을 수 있으며 사이트 디자인이 단순해집니다.</p>
+<h3>반응형 웹 디자인 예시</h3>
+<p class="white-space-ex">
+    &lt;style>
+    #page {padding: 5px; width: 960px; margin: 20px auto;}
+    #header {height: 50px;}
+    #main {width: 600px; float: left;}
+    #sidebar {width: 300px; float: right;}
+    #footer {clear: both;}
+    @media screen and (max-width: 970px) {
+    #page {width: 94%;}
+    #main {width: 65%;}
+    #sidebar {width: 30%;}}
+    @media screen and (max-width: 700px) {
+    #main {width: auto; float: none;}
+    #sidebar {width: auto; float: none;}}
+    @media screen and (max-width: 700px) {
+    #header {height: auto;}
+    h2 {font-size: 25px;}
+    #sidebar {display: none;}}
+    #header, #main, #sidebar, #footer {border: solid 1px red;}
+    #header {background-color: yellow;}
+    #main {background-color: blue;}
+    #sidebar {background-color: aliceblue;}
+    #footer {background-color: red;}
+    &lt;/style>
+    &lt;body
+    &lt;div id="page">
+    &lt;div id="header"> HEADER  &lt;/div>
+    &lt;div id="main"> MAIN  &lt;/div>
+    &lt;div id="sidebar"> SIDEBAR  &lt;/div>
+    &lt;div id="footer"> FOOTER  &lt;/div>
+    &lt;/body>
+</p>
+</section>
+</body>
+</html>

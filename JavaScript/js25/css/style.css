@@ -63,4 +63,8 @@ ul li::before {
   top: 0;
   left: 0;
   content: '▶   ';
-  color: #de5848;
+  color: #de5848;}
+
+  .white-space-ex {
+    white-space: pre-line;
+}
