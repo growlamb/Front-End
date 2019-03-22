@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>Geolocation</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+<h1><abbr title="Cascading Style Sheets">위치 정보(Geolocation)</abbr></h1>
+<h3>getCurrentPosition() 메서드</h3>
+<p class="white-space-ex">위치 정보를 가져올 때 사용하는 메서드입니다. 위치 저오를 처리하는 함수를 인수로 전달합니다.
+function getLocation(){
+    var geolocation=navigator.geolocation;
+    geolocation.getCurrentPosition(showLocation, erroHandler);
+}
+* showLocation()은 위치 정보를 처리하는 콜백 메서드입니다.
+* erroHandler()는 오류를 처리하는 콜백 메서드입니다.
+오류를 처리하는 메서드는 옵션이므로 없어도 사용이 가능합니다.</p>
+<h3>showPosition()</h3>
+<p class="white-space-ex">
+function showLocation(position){
+    var latitude=position.coords.latitude;
+    var longitude=position.coords.longitude;
+}
+* position 인수가 위치 정보를 가지고 있는 객체입니다.
+postion인수는 Position객체의 변수입니다.
+Position객체는 많은 속성을 가지고 있습니다.
+</p>
+<h3>Position 속성</h3>
+<table>
+ <tr>
+    <th>속성</th>
+    <th>타입</th>
+    <th>설명</th>
+</tr>
+<tr>
+    <td>coords</td>
+    <td>objects</td>
+    <td>장치의 위치 정보를 가지고 있는 객체이다.</td>
+</tr>
+<tr>
+    <td>coords.latitude</td>
+    <td>Number</td>
+    <td>위도 정보, 단위는 도(decimal degree)이다. 범위는 [-90.00, +90.00]</td>
+</tr>
+<tr>
+    <td>coords.longitude</td>
+    <td>Number</td>
+    <td>경도 정보, 단위는 도(decimal degree)이다. 범위는 [-180.00, +180.00]</td>
+</tr>
+<tr>
+    <td>coords.altitude</td>
+    <td>Number</td>
+    <td>고도 정보, 단위는 미터이다.</td>
+</tr>
+<tr>
+    <td>coords.heading</td>
+    <td>Number</td>
+    <td>북쪽으로부터 시계방향으로 방위각이다.</td>
+</tr>
+<tr>
+    <td>coords.speed</td>
+    <td>Number</td>
+    <td>장치의 현재 속도이다.</td>
+</tr>
+<tr>
+    <td>timestamp</td>
+    <td>date</td>
+    <td>위치 정보가 반환된 시각이다.</td>
+</tr>
+</table>
+</section>
+</body>
+</html>
