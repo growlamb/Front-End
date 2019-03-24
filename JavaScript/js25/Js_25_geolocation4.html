@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>Geolocation</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<section id="css-form">
+<h1><abbr title="Cascading Style Sheets">위치 정보(Geolocation)</abbr></h1>
+<h3>지도에 위치 표시하기</h3>
+<p class="white-space-ex">
+    현재의 위치의 위도 및 경도 데이터를 사용해 구글 서비스에서 정적 이미지 형태로 새로운 윈도우에서 보여줍니다.
+    구글 맵처럼 위도 및 경도를 사용할 수 있는 지도 서비스에 대한 엑세스가 필요합니다.
+    var myDiv= document.getElementById("target");
+    function getGeolocation(){
+        if (navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showGeolocation);
+        }
+    }
+    function showGeolocation(position) {
+        var pos=position.coords.latitude=","+position.coords.longitude;
+        var url="";
+        window.open(url);
+    }
+</p>
+</section>
+</body>
+</html>
