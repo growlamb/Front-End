@@ -1,0 +1,47 @@
+html, body {
+    background: rgb(30,30,30);
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+  }
+  ::selection {
+    background: #FF6F61;
+  }
+  .svg-line {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    width: 500px;
+  }
+  .line1,
+  .line2 {
+    stroke-dasharray: 1120;
+    stroke-width: 5px;
+    fill: transparent;
+    stroke: #FF6F61;
+    border-bottom: 5px solid black;
+    transition-timing-function: linear;
+    transition: stroke-dashoffset 4s, stroke-dasharray 4s;
+  }
+  .line1 {
+    stroke-dashoffset: 1120;
+  }
+  .line2 {
+    stroke-dashoffset: -1120;
+  }
+  .text {
+    font-family: 'Roboto Condensed';
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 8px;
+    color: #fff;
+    top: -48px;
+    position: relative;
+  }
+  .svg-line:hover .line1,
+  .svg-line:hover .line2 {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1120;
+  }
