@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ff6f61;
+  overflow: hidden;
+}
+
+.app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app .box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 10px solid #FFF;
+  border-radius: 20px 0 20px 20px;
+  box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.2);
+}
+.app .box .arrow {
+  position: absolute;
+  left: 50%;
+  width: 10px;
+  height: 250px;
+  background: #FFF;
+  -webkit-transform: rotate(45deg) translate(-210%, -35px);
+          transform: rotate(45deg) translate(-210%, -35px);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+.app .box .arrow::after, .app .box .arrow::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 30px;
+  background: #000;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  background: #ff6f61;
+}
+.app .box .arrow::after {
+  top: 30px;
+  right: 30px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.app .box .arrow::before {
+  top: 30px;
+  left: 30px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
