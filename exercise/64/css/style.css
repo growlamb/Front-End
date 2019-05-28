@@ -1,0 +1,87 @@
+@keyframes backgroundGradient {
+    0% {
+      background-position: 50% 0%;
+    }
+    50% {
+      background-position: 50% 100%;
+    }
+    100% {
+      background-position: 50% 0%;
+    }
+  }
+  @keyframes loadBounce {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+    40% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    60% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    80% {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Open Sans", sans-serif;
+    background: linear-gradient(180deg, #111, #00393c);
+    background-size: 400% 400%;
+    animation: backgroundGradient 30s ease infinite;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    color: #fff;
+  }
+  
+  p {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 26px;
+  }
+  
+  .m-linkitem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-51%, -50%);
+    -moz-transform: translate(-51%, -50%);
+    -ms-transform: translate(-51%, -50%);
+    -o-transform: translate(-51%, -50%);
+    transform: translate(-51%, -50%);
+    max-width: 500px;
+    width: 100%;
+    transform-origin: center;
+    animation: loadBounce 0.5s ease-in-out forwards;
+  }
+  .m-linkitem a {
+    transition: all 1s linear;
+    display: inline;
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 45px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-bottom: 5px;
+    background: linear-gradient(to right, #00d1b1 0%, #278fc6 98%);
+    background-size: 0px 2px;
+    background-repeat: no-repeat;
+    background-position: left 85%;
+    text-shadow: 0;
+  }
+  .m-linkitem a:hover {
+    background-size: 100% 2px;
+    text-shadow: 0 2.5px 4px rgba(0, 0, 0, 0.5);
+  }
+  
