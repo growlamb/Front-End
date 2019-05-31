@@ -1,0 +1,47 @@
+a {
+	text-decoration: none;
+	position: relative;
+	padding-bottom: 1em;
+	overflow: hidden;
+	color: white;
+  }
+  a:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	white-space: nowrap;
+	content: attr(data-text) attr(data-text);
+	color: transparent;
+	line-height: 1.8;
+	text-decoration: underline;
+	-webkit-text-decoration-style: wavy;
+			text-decoration-style: wavy;
+	-webkit-text-decoration-color: #ffc823;
+			text-decoration-color: #ffc823;
+  }
+  a:hover:after {
+	-webkit-animation: wavy-slide 3s linear infinite;
+			animation: wavy-slide 3s linear infinite;
+  }
+  
+  @-webkit-keyframes wavy-slide {
+	to {
+	  margin-left: -51%;
+	}
+  }
+  
+  @keyframes wavy-slide {
+	to {
+	  margin-left: -51%;
+	}
+  }
+  body {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #5353ff;
+  }
+  
