@@ -1,0 +1,61 @@
+    @keyframes rotateOcta {
+    12.5%{transform: translate(50px, 0);}
+    25%{transform: translate(75px, 25px);}
+    37.5%{transform: translate(75px, 75px);}
+    50%{transform: translate(50px, 100px);}
+    62.5%{transform: translate(0, 100px);}
+    75%{transform: translate(-25px, 75px);}
+    87.5%{transform: translate(-25px, 25px);}
+    100%{transform: translate(0,0);}
+  }
+  
+  .octa {
+      width: 11px;
+      height: 11px;
+      position: absolute;
+      border-radius: 100%;
+      background-color: #FF73B8;
+      top: 30%; 
+      left: 47.5%;
+      animation: 
+      rotateOcta 5s linear infinite;
+      }
+  
+  .child {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    rgba(255, 255, 255, 0);
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FF95C9;
+    top: 30%;
+    left: 47.5%;
+    z-index: -1;
+      }
+  
+  .hexagon{
+    top: 30%;
+    left: 12.5%;
+    border-color: #F1FDB0;
+  }
+  
+  .decagon{
+    top: 30%;
+    left: 85%;
+    border-color: #FFB273;
+  }
+  
+  #oct_two {margin-left: 50px;}
+  #oct_three {margin-left: 75px;margin-top: 25px;}
+  #oct_four {margin-left: 75px;margin-top: 75px;}
+  #oct_five {margin-left: 50px; margin-top: 100px;}
+  #oct_six {margin-top: 100px;margin-left: 0px;}
+  #oct_seven{ margin-top: 75px; margin-left: -25px;}
+  #oct_eight{ margin-top: 25px; margin-left: -25px;}
+  
+  html {
+    background: #453A36;
+  }
+  
