@@ -1,0 +1,56 @@
+@keyframes rotateHexa {
+  17% {transform: translate(75px, 0);}
+  33% {transform: translate(100px, 50px);}
+  50%{transform: translate(75px, 100px);}
+  67%{transform: translate(0, 100px);}
+  83%{transform: translate(-25px, 50px);}
+  100%{transform: translate(0,0);}
+}
+
+.hexa {
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    border-radius: 100%;
+    background-color: #D5FB52;
+    top: 30%; 
+    left: 12.5%;
+    animation: 
+    rotateHexa 5s linear infinite;
+}
+
+.child {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  rgba(255, 255, 255, 0);
+  border-style: solid;
+  border-width: 1px;
+  border-color: #FF95C9;
+  top: 30%;
+  left: 47.5%;
+  z-index: -1;
+    }
+
+.hexagon{
+  top: 30%;
+  left: 12.5%;
+  border-color: #F1FDB0;
+}
+
+.decagon{
+  top: 30%;
+  left: 85%;
+  border-color: #FFB273;
+}
+
+#hex_two { margin-left: 75px;}
+#hex_three {margin-left: 100px; margin-top: 50px;}
+#hex_four {margin-left: 75px; margin-top: 100px;}
+#hex_five {margin-top: 100px;}
+#hex_six { margin-top: 50px;margin-left: -25px;}
+
+html {
+  background: #453A36;
+}
