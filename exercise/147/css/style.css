@@ -1,0 +1,97 @@
+html { height: 100%; background: #EEE; }
+body{
+  text-align: center;
+  font: 400 16px Helvetica, Arial, sans-serif;
+  padding:0;
+  margin:0;
+}
+* {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;   
+  box-sizing: border-box;
+}
+header{ margin: 0 auto; padding:20px 0; }
+h1 { font-size:32px; }
+h1,h2,h3,p{ margin:5px 0; padding:0 }
+section h2 { 
+  margin:0 auto;
+  padding:0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section { 
+  position:relative; 
+  display:inline-block; 
+  width:200px; 
+  height:200px; 
+  margin:20px; 
+  overflow: hidden;
+}
+.black { 
+  background: #000; 
+  color:#fff; 
+  box-shadow:0px 5px 15px 0px rgba(0, 0, 0, 0.4);
+}
+.corner {
+  position: absolute;
+  background:none;
+  width:6em;
+  height:6em;
+  font-size:2px;
+  font-size:10px;
+  opacity: 1.0;
+  transition: opacity 0.3s ease-in-out;
+}
+.corner:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width:0.2em;
+  height:0.2em;
+}
+.topleft {
+  top:1em;
+  left:1em; 
+  -webkit-transform:rotate(360deg); transform:rotate(360deg); 
+}
+.topright {  
+  top:1em; right:1em; -webkit-transform:rotate(90deg); transform:rotate(90deg); 
+}
+.bottomleft { 
+  bottom:1em; left:1em; -webkit-transform:rotate(270deg); transform:rotate(270deg); 
+}
+.bottomright { 
+  bottom:1em; right:1em; -webkit-transform:rotate(180deg); transform:rotate(180deg); 
+}
+
+.variant:after {
+    width:0.1em;
+    height:0.1em;
+  }
+  .corner6:after {
+    box-shadow:
+      0.6em 0em #fff, 0.8em 0em #fff, 1.4em 0em #fff, 1.6em 0em #fff, 2.4em 0em #fff, 2.6em 0em #fff, 
+      0.6em 0.2em #fff, 1.0em 0.2em #fff, 1.2em 0.2em #fff, 1.6em 0.2em #fff, 2.2em 0.2em #fff, 2.8em 0.2em #fff, 4.2em 0.2em #fff, 
+      0.8em 0.4em #fff, 1.6em 0.4em #fff, 2.4em 0.4em #fff, 2.8em 0.4em #fff, 3.2em 0.4em #fff, 3.4em 0.4em #fff, 3.6em 0.4em #fff, 4.0em 0.4em #fff, 4.4em 0.4em #fff, 4.8em 0.4em #fff, 5.2em 0.4em #fff, 
+      0em 0.6em #fff, 0.2em 0.6em #fff, 1.0em 0.6em #fff, 1.6em 0.6em #fff, 2.8em 0.6em #fff, 4.2em 0.6em #fff,
+      0em 0.8em #fff, 0.4em 0.8em #fff, 1.6em 0.8em #fff, 2.6em 0.8em #fff,
+      0.2em 1.0em #fff, 0.6em 1.0em #fff, 0.8em 1.0em #fff, 1.0em 1.0em #fff, 1.2em 1.0em #fff, 1.6em 1.0em #fff, 2.0em 1.0em #fff, 2.2em 1.0em #fff, 2.4em 1.0em #fff, 
+      0.2em 1.2em #fff, 1.6em 1.2em #fff, 
+      0em 1.4em #fff, 1.0em 1.4em #fff, 1.8em 1.4em #fff, 
+      0em 1.6em #fff, 0.2em 1.6em #fff, 0.4em 1.6em #fff, 0.6em 1.6em #fff, 1.0em 1.6em #fff, 2.0em 1.6em #fff, 
+      1.0em 1.8em #fff, 1.4em 1.8em #fff, 2.0em 1.8em #fff, 
+      1.0em 2.0em #fff, 1.6em 2.0em #fff, 1.8em 2.0em #fff, 2.0em 2.0em #fff, 
+      0.2em 2.2em #fff, 1.0em 2.2em #fff, 2.2em 2.2em #fff, 2.6em 2.2em #fff, 
+      0em 2.4em #fff, 0.4em 2.4em #fff, 1.0em 2.4em #fff, 
+      0em 2.6em #fff, 0.8em 2.6em #fff, 2.2em 2.6em #fff, 
+      0.2em 2.8em #fff, 0.4em 2.8em #fff, 0.6em 2.8em #fff, 
+      0.4em 3.2em #fff, 
+      0.4em 3.4em #fff, 
+      0.4em 3.6em #fff, 
+      0.4em 4.0em #fff, 
+      0.2em 4.2em #fff, 0.6em 4.2em #fff, 
+      0.4em 4.4em #fff, 
+      0.4em 4.8em #fff, 
+      0.4em 5.2em #fff;
+  }
