@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>starrating3</title>
+  <link rel="stylesheet" href="css/style.css">
+</head> 
+<body>
+<svg class="icon-source">
+	<defs>
+	<path id="star" d="M12,1.776l3.286,6.779l7.464,1.032l-5.433,5.221l1.326,7.417L12,18.67l-6.645,3.555l1.327-7.417L1.25,9.587l7.464-1.032L12,1.776z"/>
+	</defs>
+</svg>
+
+<form class="rating-form" action="#" method="post" name="rating-movie">
+  <fieldset class="form-group">
+    <legend class="form-legend">Rating:</legend>
+    <div class="form-item">
+      <input id="rating-5" name="rating" type="radio" value="5" />
+      <label for="rating-5" data-value="5">
+        <span class="rating-star">
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star"></i>
+        </span>
+        <span class="ir">5</span>
+      </label>
+      <input id="rating-4" name="rating" type="radio" value="4" />
+      <label for="rating-4" data-value="4">
+        <span class="rating-star">
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star"></i>
+        </span>
+        <span class="ir">4</span>
+      </label>
+      <input id="rating-3" name="rating" type="radio" value="3" />
+      <label for="rating-3" data-value="3">
+        <span class="rating-star">
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star"></i>
+        </span>
+        <span class="ir">3</span>
+      </label>
+      <input id="rating-2" name="rating" type="radio" value="2" />
+      <label for="rating-2" data-value="2">
+        <span class="rating-star">
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star"></i>
+        </span>
+        <span class="ir">2</span>
+      </label>
+      <input id="rating-1" name="rating" type="radio" value="1" />
+      <label for="rating-1" data-value="1">
+        <span class="rating-star">
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star"></i>
+        </span>
+        <span class="ir">1</span>
+      </label>
+      <div class="form-action">
+        <input class="btn-reset" type="reset" value="Reset" />   
+	  </div>
+      <div class="form-output"> ? / 5 </div>
+    </div>
+	</fieldset>
+</form>
+</body>
+</html>
