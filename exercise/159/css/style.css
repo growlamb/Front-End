@@ -1,0 +1,156 @@
+:root {
+  --stars: 'see html editor';
+  --votes: 20;
+  --score: 70;
+}
+
+body {
+  font-family: "Helvetica";
+  font-size: 62.5%;
+}
+
+input {
+  font-family: inherit;
+}
+
+.rating {
+  background-color: #7bf;
+  border: 4px solid #0003;
+  border-radius: 32px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+}
+.ratings {
+  margin: 8px 16px;
+  position: relative;
+}
+.rating .star {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  box-sizing: border-box;
+  font-family: FontAwesome;
+  font-size: 3em;
+  margin: 0 -.1em;
+  position: relative;
+}
+.rating .star:before, .rating .star:after {
+  display: inline-block;
+  padding: .05em .15em;
+  vertical-align: top;
+  transition: all .25s;
+}
+.rating .star:before {
+  content: "\f005";
+  position: relative;
+}
+.rating .star:after {
+  content: "\f006";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.rating__blank, .rating__people, .rating__you {
+  box-sizing: border-box;
+  white-space: nowrap;
+  transition: all 1s;
+}
+.rating__people, .rating__you {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.rating__blank .star:before {
+  color: #ddd;
+  -webkit-text-stroke: 1px #000;
+}
+.rating__blank .star:after {
+  color: #0003;
+}
+.rating__people {
+  width: calc(100% * (var(--score) / (var(--votes) * var(--stars))));
+  overflow: hidden;
+}
+.rating__people .star:before {
+  color: #39f;
+}
+.rating__people .star:after {
+  color: #0003;
+}
+.rating__you {
+  direction: rtl;
+}
+.rating__you .star {
+  cursor: pointer;
+ }
+.rating__you .star:before, .rating__you .star:after {
+  opacity: 0;
+}
+.rating__you .star:before {
+  color: #fc0;
+  text-shadow: 0px 0px 1px #000;
+}
+.rating__you .star:hover ~ .star:before, .rating__you .star:hover:before {
+  opacity: 1;
+}
+.rating__you .star:after {
+  color: #ff0;
+  -webkit-text-stroke: .025em #0006;
+}
+.rating__you .star:checked ~ .star:after, .rating__you .star:checked:after {
+  opacity: 1;
+}
+
+.btn {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #eee;
+  border-radius: 32px;
+  box-shadow: inset 0 0 0 1px #0003, inset 0 3px #fff6;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 8px;
+  padding: .4em .8em;
+  font-size: 1.25em;
+  transition: all .2s;
+  outline: none;
+  vertical-align: middle;
+}
+.btn:hover, .btn:focus {
+  background-color: #fff;
+}
+.btn:active {
+  background-color: #ddd;
+}
+.btn:after {
+  content: "Clear Rating";
+}
+
+.info {
+  border-top: 1px solid #0001;
+  margin-top: 8px;
+  padding: 1em;
+}
+.info .num:before {
+  content: "???";
+}
+.info #rating_current:before {
+  counter-reset: num var(--score);
+  content: counter(num);
+}
+.info #rating_max:before {
+  counter-reset: num var(--score_max);
+  content: counter(num);
+}
+.info #rating_percent:before {
+  counter-reset: num var(--a);
+  content: counter(num);
+}
+.info #rating_votes:before {
+  counter-reset: num var(--votes);
+  content: counter(num);
+}
