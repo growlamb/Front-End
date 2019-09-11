@@ -22,11 +22,11 @@
 .card-wrapper .card .front {
   z-index: 2;
 }
-.card-wrapper.flip-diagonal-left .card .back {
-  transform: rotate3d(1, 1, 0, -180deg);
+.card-wrapper.flip-diagonal-right .card .back {
+  transform: rotate3d(1, 1, 0, 180deg);
 }
-.card-wrapper.flip-diagonal-left:hover .card {
-  transform: rotate3d(1, 1, 0, -180deg);
+.card-wrapper.flip-diagonal-right:hover .card {
+  transform: rotate3d(1, 1, 0, 180deg);
 }
 body {
   background: #E7BDD6;
