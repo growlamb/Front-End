@@ -1,0 +1,12 @@
+body {
+    background: linear-gradient(120deg, 
+    transparent 75%, #a13582 75%) 0 0, 
+    linear-gradient(240deg, 
+    transparent 75%, #a13582 75%) 0 0, 
+    linear-gradient(120deg, 
+    transparent 75%, #772760 75%) 28.867513452295906px -50px, 
+    linear-gradient(240deg, 
+    transparent 75%, #772760 75%) 28.867513452295906px 50px, 
+    linear-gradient(#48183b 50%, #39132e 50%);
+    background-size: 57.73502690459181px 100px;
+  }  
